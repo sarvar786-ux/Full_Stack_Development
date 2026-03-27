@@ -1,0 +1,13 @@
+/* block level element */
+div{
+    /* short-hand property */
+    border: 2px solid black;
+    background-color: aqua;
+}
+/* inline level element */
+span{
+    /* border: 3px solid rgba(202, 190, 23, 0.231); */
+    /* short-hand property */
+    padding: 10px 15px 20px 25px;
+    margin-left: 40px;
+}

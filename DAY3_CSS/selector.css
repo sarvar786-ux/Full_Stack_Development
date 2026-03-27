@@ -1,0 +1,10 @@
+.data{
+    color: rgb(66, 120, 120);
+}
+#developer{
+    color: rgb(173, 147, 62);
+}
+*{
+    background-color: rgb(198, 198, 198);
+    margin: 10px;
+}
