@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2</title>
+    <style>
+        *{
+            background-color: #ffffff98; ;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="" method="post" target="">
+        <fieldset>
+            <legend>Basic Information :</legend>
+            <label for="username">Name</label>
+            <input type="text" name="username" id="username" placeholder="Enter username"><br><br>
+            <label for="Fathername">Father's Name</label>
+            <input type="text" name="Fathername" id="Fathername" placeholder="Enter father's name"><br><br>
+            <label for="mothername">Mother's Name</label>
+            <input type="text" name="mothername" id="mothername" placeholder="Enter mother's name"><br><br>
+            <label for="Dateofbith">Date of Birth</label>
+            <input type="date" name="Dateofbith" id="Dateofbith"><br><br>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="18" max="27"><br><br>
+            <label for="Gender">Gender</label>
+            <input type="radio" name="Gender" id="Gender">Male
+            <input type="radio" name="Gender" id="Gender">Female
+            <input type="radio" name="Gender" id="Gender">Other
+        </fieldset>
+    <fieldset>
+        <legend>Contact Information :</legend>
+        <label for="photo">Photo</label>
+        <input type="file" name="photo" id="photo" accept="image/*"><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter email"><br><br>
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" placeholder="Enter phone number"><br><br>
+        <label for="linkedin">linkedin</label>
+        <input type="url" name="linkedin" id="linkedin" placeholder="Enter linkedin profile URL"><br><br>
+        <label for="Address">Address</label>
+        <textarea name="Address" id="Address" placeholder="Enter address"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Hobbies and Favorite Activities</legend>
+        <label for="lang">Languages Known</label>
+        <input type="checkbox" name="lang" id="lang" placeholder="Enter languages known" >Java
+        <input type="checkbox" name="lang" id="lang" placeholder="Enter languages known">Python
+        <input type="checkbox" name="lang" id="lang" placeholder="Enter languages known" disabled>C
+        <input type="checkbox" name="lang" id="lang" placeholder="Enter languages known">SQL <br><br>
+
+        <label for="Food">Food</label>
+        <select name="Food" id="Food">
+                <option value="">---select---</option>
+                <optgroup label="South Indian">
+                    <option value="Idle">Idly</option>
+                    <option value="Dosa">Dosa</option>
+                    <option value="Pongal">Pongal</option>
+                </optgroup>
+                <optgroup label="North Indian">
+                    <option value="Biryani">Biryani</option>
+                    <option value="Kabab">Kabab</option>
+                </optgroup>
+        </select><br><br>
+        <label for="pets">Pets</label>
+        <input list="pets">
+        <datalist id="pets">
+            <option value="Dog">
+            <option value="Cat">
+            <option value="Rabbit">
+            <option value="Fish">
+    </fieldset>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
+<!-- select is used for selecting the list custom input is not support 
+    dropdown functionality is supported by select
+    list is used for creating a dropdown list of predefined options and we can search also custom input is supported
+    input and select are both used for creating dropdown lists -->
