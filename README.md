@@ -1,7 +1,7 @@
 # 🚀 Java Full Stack Development Journey
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00F7FF&center=true&vCenter=true&width=600&lines= Java+Full+Stack+Developer+in+Progress...;Building+Real+World+Projects...;Learning+Everyday+🚀" />
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00F7FF&center=true&vCenter=true&width=600&lines=JJava+Full+Stack+Developer+in+Progress...;Building+Real+World+Projects...;Learning+Everyday+🚀" />
 </p>
 
 ---
