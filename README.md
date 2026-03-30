@@ -94,19 +94,11 @@ Java-Full-Stack/
 
 ---
 
-## 🏆 Achievements
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sarvar786-ux&theme=onedark" />
-</p>
-
----
-
 ## 🌐 Connect With Me
 
 <p>
   <a href="https://github.com/sarvar786-ux"><img src="https://skillicons.dev/icons?i=github" /></a>
-  <a href="#"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
+  <a href="https://www.linkedin.com/in/mohammed-sarvar/"><img src="https://skillicons.dev/icons?i=linkedin" /></a>
 </p>
 
 ---
