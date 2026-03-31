@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting tags</title>
+    <style>
+        marquee {
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid black;
+            height: 50px;
+            background-color: rgb(196, 128, 128);
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!-- default direction is left -->
+    <marquee behavior="" direction="right" bgcolor="yellow" scrollamount="20">Element1</marquee><br>
+    <marquee behavior="" direction="left" scrolldelay="300">Element2</marquee><br>
+    <marquee behavior="" direction="up" scrollamount="10">Element3</marquee><br>
+    <marquee behavior="" direction="down" scrolldelay="200">Element4</marquee><hr>
+    <!-- default behavoiur is scroll -->
+    <marquee behavior="scroll" direction="">scroll</marquee>
+    <marquee behavior="slide" direction="">slide</marquee>
+    <marquee behavior="alternate" direction="">alternate</marquee>    <hr>
+
+    <br><br>
+    <!-- details tag used to create collapsible sections -->
+    <details>
+        <summary>Sarvar</summary>
+        <p>Data scientist and java full stack developer and a passionate learner of new technologies.</p>
+    </details>
+    <!-- HTML entities for special characters -->
+    <P>5 &copy; 3</P>
+</body>
+</html>
