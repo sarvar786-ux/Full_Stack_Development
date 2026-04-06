@@ -1,0 +1,122 @@
+javascript:
+        - is a scripting language
+        -used to create a dynamic(behaviour /functionality) and interactive webpages /applicatioi=ns
+        -it is used as client (UI) and server side(node JS) language
+        -it is a synchronous language(it execute the code line by by)
+        -it is the case sensitive language
+ 
+synchronous(line by line execution)
+asynchronous(execute at a time)
+
+libraries used i ava script:
+        -node JS (server)
+        -react JS (library)
+        -Angular JS(framework)
+
+we can add js in index:
+        -inline 
+        -internal
+        -External
+
+Tokens:
+------
+        building blocks of a program
+        1.keywords
+        2.identifiers
+        3.values/data/literals
+        4.variable
+        5.Operatos
+        6.separators
+
+1.keywords:predefined or the reserved words
+ex: let, var, const, function, if, for, while etc....,
+===========================================================================================
+
+2.identifiers: names providing to the variable , object, function, listsetc...,
+rules:
+    1.Names cannot start with number
+    2.Names cannot start with special character(tip:can be use after "_" symbol)
+    3.dont use space between the space
+    4.keywords are not allowed as a name 
+    5, name should be short, simple and meaningful
+
+===========================================================================================
+3.value/literals/data:
+        1.number:10,20 ....etc
+        2.Strings: Group of characters
+                 "xyz",'xyz',`xyz(backtick is string for--used for interpolation)
+        3.boolean:T/F
+        4.Null
+        5.Undefined
+        6.array:[10,20,20]
+        7. object:{
+                "key1"=val1
+                "key2"=val2
+        }
+
+        data:
+                1.premitive Data Type:----storing single value
+                   number
+                   string
+                   boolean
+                   Null
+                   Undefined
+                   symbol
+                   bigiht
+                2.non premitive Data Type:----multiple data
+                   object
+                   json
+                   arrays
+                   map
+                   set 
+note: typeof is used to know the which datatype is used 
+===========================================================================================
+
+4.variable: it a container used to store a data/value
+
+
+declaration of a variable 
+-------------------------
+        let
+        var
+        const
+        
+        
+assigning the values:
+---------------------
+        a=10;
+        console.log(a) //print the value in console
+
+
+re-assigning /re-intailization the variable
+ ------------------------------------------
+        let a=10;
+        console.log(a);
+        a=20;
+        
+hosting :
+--------
+        printing the value before declaring the valu
+        it a behaviour where varible and a function declaration are moved to th etop ofth escope
+        before execution 
+
+        let a ;
+        console.log(a);
+        a=10;
+------------------------------------------------------------------------
+                        var             let             const
+------------------------------------------------------------------------
+scope                   function        block           block
+
+re-declare              yes             No               No
+
+re-assign               yes             yes              No
+ 
+declaring without       Undefined       Undefined       error
+assign                 
+(assign)                optional        optional        optional
+
+
+Hosting                 yes             yes             yes
+
+-------------------------------------------------------------------------

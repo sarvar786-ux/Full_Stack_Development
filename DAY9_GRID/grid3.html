@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taskgrid1</title>
+</head>
+<style>
+    .parent{
+        border: 1px solid black;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(8,1fr);
+    }
+    ._1
+    {
+     background-color: yellow;
+        grid-column: 1/4; 
+        grid-row: 1/2;
+    }
+    ._2
+    {
+       background-color: lightgreen;
+        grid-column: 1/3;
+        grid-row: 2/8;
+    }
+    ._3
+    {
+       background-color: lightblue;
+        grid-column: 3/4;
+        grid-row: 2/8;
+    }
+    ._4{
+        background-color: lightpink;
+        grid-column: 1/4;
+        grid-row: 8/9;
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="_1">nav bar</div>
+        <div class="_2">main content</div>
+        <div class="_3">sidebar</div>
+        <div class="_4">footer</div>
+    </div>
+</body>
+</html>
