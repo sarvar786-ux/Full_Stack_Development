@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oprators</title>
+</head>
+<body>
+    <script>
+// operators 
+
+//arithematic operator
+        let a=10;
+        let b=20;
+        // arithimetic operator
+        console.log(a+b); //operator
+        console.log(a-b); //operator
+        console.log(a*b); //operator
+        console.log(a/b); //operator
+        console.log(a%b); //operator
+        //compound or assignment operator
+
+        let x1=5;  //assignment operator
+        x1+=a
+        console.log(x1);
+        x1**=a;  //x=x**a
+        x1/=a;   //x=x/a
+        x1*=a;   //x=x*a
+        x1%=a;   //x%a=x
+        
+        
+        console.log(10+10);
+        console.log(10+"sarvar");
+
+        let name='sarvar'
+        console.log('hello'+ name);
+
+        console.log(`hello ${name}`);
+
+
+
+
+// comparision operators   --boolean data
+
+        console.log(a==b);// equals to(=)
+        console.log(a!=b);// not equals to(!)
+        console.log(a>b);// greater than to(>)
+        console.log(a<b);// less to(<)
+        console.log(a>=b);// greater than equals to(=)
+        console.log(a<=b);// less than equals to(=)
+
+        console.log(10=="10"); //checks only value
+        console.log(10==="10"); //checks value as well as data type
+
+// logical operator on boolean and gives boolean
+        
+        console.log("====logical AND=====");
+        console.log(true&&true);
+        console.log(false&&false);
+        console.log(true&&false);
+        console.log(false&&true);
+            // any one side is false then o/p is false
+        console.log("======Logical or======");
+        
+        console.log(true||true);
+        console.log(false||false);
+        console.log(true||false);
+        console.log(false||true);
+        //     // IF BOTH SIDE IS FALSE THEN O/P IS FALSE OTHERWISE TRUE        
+        console.log("====logical NOT");
+        console.log(!true);
+        console.log(!false);
+        
+// Ternary operator / conditional operator
+        let balance=1000;
+        let withdraw=1500;
+
+                    // syntax
+                    // operand1   ?  operand2: operand3
+                    // (condition)?  True    : False
+        let result=(balance<withdraw)?"insufficient balance":"you can withdraw"
+        console.log(result);
+
+        let age=17;
+        let gender="M";
+
+        let vote=(age<=18&&(gender=="M"||gender=="F"))?"not eligible can't vote":"you are Eligible you can vote"
+        console.log(vote);
+        
+// unary operator   
+
+        console.log("======unary operator=======");        
+        let value=10;
+        console.log(value);
+        console.log(value+1);
+        console.log(value++);
+        // 1.increment unary operator(++)
+        // 2.decrement unary operator(--)
+
+        ++value; //pre increment
+        value++  //post increment 
+        console.log(value);
+        let x=10;
+        let y=5;
+        // let result1= ++x + y++ - ++y;
+        // console.log(x);
+        // console.log(y);
+        // console.log(result1);
+        
+        let result2= x++ + --x + ++y - y-- + ++x
+        console.log(x);
+        console.log(y);
+        console.log(result2);
+        
+        
+        
+        // 2.decrement unary operator(--)
+
+        // same works as the increment but it decreases teh values
+
+
+
+
+    </script>
+</body>
+</html>

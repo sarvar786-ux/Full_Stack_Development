@@ -1,22 +1,22 @@
 javascript:
         - is a scripting language
-        -used to create a dynamic(behaviour /functionality) and interactive webpages /applicatioi=ns
-        -it is used as client (UI) and server side(node JS) language
-        -it is a synchronous language(it execute the code line by by)
-        -it is the case sensitive language
+        - used to create a dynamic(behaviour /functionality) and interactive webpages /applicatioi=ns
+        - it is used as client (UI) and server side(node JS) language
+        - it is a synchronous language(it execute the code line by by)
+        - it is the case sensitive language
  
 synchronous(line by line execution)
 asynchronous(execute at a time)
 
-libraries used i ava script:
-        -node JS (server)
-        -react JS (library)
-        -Angular JS(framework)
+libraries used i java script:
+        - node JS (server)
+        - react JS (library)
+        - Angular JS(framework)
 
 we can add js in index:
-        -inline 
-        -internal
-        -External
+        - inline 
+        - internal
+        - External
 
 Tokens:
 ------
@@ -30,15 +30,16 @@ Tokens:
 
 1.keywords:predefined or the reserved words
 ex: let, var, const, function, if, for, while etc....,
+
 ===========================================================================================
 
-2.identifiers: names providing to the variable , object, function, listsetc...,
+2.identifiers: names providing to the variable , object, function, lists etc...,
 rules:
-    1.Names cannot start with number
-    2.Names cannot start with special character(tip:can be use after "_" symbol)
-    3.dont use space between the space
-    4.keywords are not allowed as a name 
-    5, name should be short, simple and meaningful
+    1. Names cannot start with number
+    2. Names cannot start with special character(tip:can be use after "_" symbol)
+    3. dont use space between the space
+    4. keywords are not allowed as a name 
+    5. Name should be short, simple and meaningful
 
 ===========================================================================================
 3.value/literals/data:
@@ -120,3 +121,80 @@ assign
 Hosting                 yes             yes             yes
 
 -------------------------------------------------------------------------
+=========================================================================
+Operators:
+----------
+        it is the symbol which is usesd to perform operation on values(operands)
+
+
+        10            +         20
+        (operand) (Operator)  (operand)
+
+        1. Arithematic operator:
+
+                                + , - , / , * , % , **
+
+                note: + acts like concatanation(merging) for the string
+                      `${}` acts like concatanation
+                operator presedence:
+                        ()
+                        **
+                        * / %
+                        + -
+
+        2.Assignment operartor/compound assignment operator:
+                                = , += , -= , /=, &=, **=
+
+        3. Comparision opoerator/Relational operator:
+                                < > <= >= == === != !==
+                        note: == compare only values 
+                              === compare values and data type 
+        4. Logical Operator:
+                        && || !
+        
+        5. conditional Operator:
+                        operand1?operand2:operand3
+
+                        operand1--> conditional
+                        Operand2--> True
+                        operand3-->false
+
+        6.typeof Operator:
+                        used to know the data type of the data/literals
+        
+        7. unary operator:
+                        1.increment unary operator:
+                                1.pre-increment :++value
+                                                first increase the value and use the values
+                                2.post increment: value++
+                                                  first use the value and increase the value
+                        2. decrement unary operator:
+                                1.pre-decrement: --value
+                                                first decrease the value and usethe value
+                                2.post-decrement: value--
+                                                first use the value and decrease the value
+
+======================================================================================================
+
+conditional statements:
+=======================
+                used to make decisions
+
+                types:
+                1. if statement: if condition satisfy then block of code will execute
+                        syntax: if (condition ){
+                                //code
+                        }
+                2. else if statement : if condition is satisfy/true then if block will execute
+                                or else block will execute 
+                                syntax: if (condition){
+                                        //code}
+                                        else{
+
+                                        }
+                                note: without if we cannat use else statement
+
+
+                3. else if ladder statement :
+                4. nested if  statement :
+                5. switch statement :
