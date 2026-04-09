@@ -162,7 +162,7 @@ Operators:
         6.typeof Operator:
                         used to know the data type of the data/literals
         
-        7. unary operator:
+        7.Unary operator:
                         1.increment unary operator:
                                 1.pre-increment :++value
                                                 first increase the value and use the values
@@ -178,6 +178,7 @@ Operators:
 
 conditional statements:
 =======================
+                it is used to execute a block of code 
                 used to make decisions
 
                 types:
@@ -195,6 +196,51 @@ conditional statements:
                                 note: without if we cannat use else statement
 
 
-                3. else if ladder statement :
-                4. nested if  statement :
-                5. switch statement :
+                3. else if ladder statement :when having multiple condition we use else if ladder 
+                        syntax: if(condition1){
+                                //
+                        }else if(condition2){
+                                //
+                        }else if(condition3){
+                                //
+                        }else if (condition n ){
+                                //
+                        }else{
+
+                        }
+
+                4. nested if  statement :conditional statement inside a conditional statement
+                        syntax:
+                                if(condition){
+                                    if(condition){
+                                        //
+                                    }else {
+                                        //
+                                    }
+                                }
+                5. switch statement : 
+                        switch statements is used to compare with cases 
+                         switch(value/variable/data){
+                                case 1:          break;
+                                case 2:          break;
+                                case 3:          break;
+                                case 4:          break;
+                                case 5:          break;
+                                case n:
+                                default:
+                         }
+                note: break is a keywords or it acts like a breaking statements ,which help to break /interupt the program
+                      default is a keyword if non of the cases are not matching then 
+                      default block WILL execute
+
+
+note: one line of the code curly brackets is not needed (optional)
+        for more than one line{} are mandatory
+
+===================================================================================================
+Looping statements
+==================
+        It is used to execute a block of code multiple times untill the condition satisfy
+        1. while loop
+        2. dowhile loop
+        3. for loop

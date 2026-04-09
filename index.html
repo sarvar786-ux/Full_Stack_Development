@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HeadlessPizza</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <body>
     <nav class="nav">
         <div class="nav-div">
-            <div class="logo"><img src="./logo-p.png" alt="logo"></div>
+            <div class="logo"><img src="./assets/logo-p.png" alt="logo"></div>
             <div class="search-box">
                 <input type="text" placeholder="Search for your favorite Pizza">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="main">
-        <div class="one"> <img src="./d1.jpg" alt="">
+        <div class="one"> <img src="./assets/d1.jpg" alt="">
             <h3 class="name">BBQ Chicken Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -32,7 +32,7 @@
                 <span class="price">$16.25</span>
             </div>
         </div>
-        <div class="two"> <img src="./d2.jpg" alt="">
+        <div class="two"> <img src="./assets/d2.jpg" alt="">
             <h3 class="name">Hawaiian Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -40,7 +40,7 @@
                 <span class="price">$14</span>
             </div>
         </div>
-        <div class="three"> <img src="./d4.jpg" alt="">
+        <div class="three"> <img src="./assets/d4.jpg" alt="">
             <h3 class="name">Vegetarian Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -48,7 +48,7 @@
                 <span class="price">$13</span>
             </div>
         </div>
-        <div class="four"><img src="./d5.jpg" alt="">
+        <div class="four"><img src="./assets/d5.jpg" alt="">
             <h3 class="name">Pepperoni Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -56,7 +56,7 @@
                 <span class="price">$15.75</span>
             </div>
         </div>
-        <div class="five"><img src="./d6.jpg" alt="">
+        <div class="five"><img src="./assets/d6.jpg" alt="">
             <h3 class="name">Margherita Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -64,7 +64,7 @@
                 <span class="price">$12.5</span>
             </div>
         </div>
-        <div class="six"><img src="./d7.jpg" alt="">
+        <div class="six"><img src="./assets/d7.jpg" alt="">
             <h3 class="name">Onion Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -72,7 +72,7 @@
                 <span class="price">$15</span>
             </div>
         </div>
-        <div class="seven"><img src="./d8.png" alt="">
+        <div class="seven"><img src="./assets/d8.png" alt="">
             <h3 class="name">Garlic Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -80,7 +80,7 @@
                 <span class="price">$28</span>
             </div>
         </div>
-        <div class="eight"><img src="d9.jpg" alt="">
+        <div class="eight"><img src="./assets/d9.jpg" alt="">
             <h3 class="name">Chessy Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -88,7 +88,7 @@
                 <span class="price">$25.12</span>
             </div>
         </div>
-        <div class="nine"><img src="d10.jpg" alt="">
+        <div class="nine"><img src="./assets/d10.jpg" alt="">
             <h3 class="name">Tomato Pizza</h3>
             <div class="rating">
                 <i class="fa-solid fa-star" style="color: rgb(255, 255, 255);"></i>
@@ -100,7 +100,7 @@
 
     <footer class="bottom">
         <div class="logo-bottom">
-            <img src="./logo-p.png" alt="Headless Pizza Logo">
+            <img src="./assets/logo-p.png" alt="Headless Pizza Logo">
             <p class="footer-text">Headless Pizza is a demo app to showcase Pizza Menu built using Wix Studio's Headless
                 CMS as the Backend along with React JS as the Frontend.</p>
             <div class="social">
@@ -113,10 +113,10 @@
         </div>
         <div class="foot">
             <h2 class="Subscribe">Subscribe</h2>
-            <div class="subscribe-row">
-                <input type="email" placeholder="johndoe@gmail.com">
-                <button>Subscribe</button>
-            </div>
+            <form action="" method="GET" class="subscribe-row">
+                <input type="email" name="email" placeholder="johndoe@gmail.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
             <p>Subscribe to our newsletter for latest updates, deals and offers related to Headless Pizza right inside
                 your mailbox.</p>
         </div>
@@ -124,7 +124,5 @@
             &copy; 2024 Headless Pizza Limited
         </div>
     </footer>
-
 </body>
-
 </html>

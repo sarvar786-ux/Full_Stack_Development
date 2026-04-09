@@ -7,24 +7,77 @@
 </head>
 <body>
     <script>
-        console.log("======conditional statements===========");
-        console.log("===if======");
+        // console.log("======conditional statements===========");
+        // console.log("===if======");
         
-        let num=11;
-        if (num%2==0){
-                      console.log(num,"is even number");
+        // let num=11;
+        // if (num%2==0){
+        //               console.log(num,"is even number");
         
-                    }
-        console.log("===== else if =====");
-            // age 18-30
-        let age=28;
-        if(age>=18&&age<=30){
-            console.log("eligible for the army");
-            }else{
-                console.log("Not eligible");   
+        //             }
+        // console.log("===== else if =====");
+        //     // age 18-30
+        // let age=28;
+        // if(age>=18&&age<=30){
+        //     console.log("eligible for the army");
+        //     }else{
+        //         console.log("Not eligible");   
+        //     }
+        console.log("=====ELSE IF LADDER======");
+        
+        // 90----A
+        //81-89---B
+        //70-80---C
+        //60-70----D
+        //<=60-----E
+
+        // let marks=prompt("enter the value:");
+        let marks=67;
+        if(marks>=90 && marks<=100){
+            console.log("A:Grade");
+        }else if(marks>=80 && marks<=89){
+            console.log("B:Grade");
+        }else if(marks>=70 && marks<=79){
+            console.log("C:Grade");
+        }else if(marks>=60 && marks<=69){
+            console.log("D:Grade");
+        }else if(marks<60 && marks>=0){
+            console.log("E:Grade");
+        }else{
+            console.log("Enter the number in the range of 0-100");
             }
+        
 
+        console.log("=====nested if =======");
+        //pass or fail 
+        // if i pass i have pass distinction
+        // let mark=20;
+        // if(mark>=40&&mark<=200){
+        //     console.log("passed in the exam");
+        //     if (mark>=150) {
+        //         console.log('dictiction'); 
+        //     }else{
+        //         console.log('failed in exam');
+                
+        //     }
+            
+        // }
+        
 
+        console.log("====switch=====");
+
+        let day =10;
+        switch(day){
+            case 1:{console.log("SUNDAY");}break;
+            case 2:{console.log("MONDAY");}break;
+            case 3:{console.log("TUESDAY");}break;
+            case 4:{console.log("WEDNESDAY");}break;
+            case 5:{console.log("THURSDAY");}break;
+            case 6:{console.log("FRIDAY");}break;
+            case 7:{console.log("SATURDAY");}break;
+            default:{console.log('Enter the day properly');}
+        }
+        
     </script>
 </body>
 </html>
