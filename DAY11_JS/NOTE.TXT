@@ -244,3 +244,20 @@ Looping statements
         1. while loop
         2. dowhile loop
         3. for loop
+
+                while                                   do while
+                ---------------------------------------------------------
+syntax          while(condition){                      do{
+
+                                                        }while(condition)
+                //
+                }
+no.of iteration   0                                     1
+                first check condition,                  first execute the code,
+                then execute the code                   then checks the condition
+
+for loop:
+---------
+        For (declare and initilize ; condition ; updation){
+                
+        }
