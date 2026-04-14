@@ -60,6 +60,37 @@
         console.log(p5); // { name: 'sarvar', age: 25, city: 'Hyderabad' }
 
 
+        // nested objects 
+
+            let obj= {
+                "id": 1,
+                "name": "Leanne Graham",
+                "username": "Bret",
+                "email": "Sincere@april.biz",
+                'key':[10,203,34],
+                "company": {
+                "name": "Romaguera-Crona",
+                "catchPhrase": "Multi-layered client-server neural-net",
+                "bs": "harness real-time e-markets"
+                }
+
+            }
+
+            console.log(obj,["name"]);
+            
+            console.log(obj.name);
+            console.log(Object.keys(obj));
+            // console.log(Object.values(obj));
+            console.log(Object.entries(obj));
+
+
+            for (const key in obj) {
+                console.log(key + ": " + obj[key]);
+            }
+            
+            
+
+
 
 
     </script>
