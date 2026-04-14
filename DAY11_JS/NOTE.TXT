@@ -4,7 +4,7 @@ javascript:
         - it is used as client (UI) and server side(node JS) language
         - it is a synchronous language(it execute the code line by by)
         - it is the case sensitive language
- 
+        - ES (ECMA )
 synchronous(line by line execution)
 asynchronous(execute at a time)
 
@@ -363,18 +363,50 @@ Functions:
                 async is a function which hold a promises 
                 await is a keyword used to wait for a promise to resolve 
                 await is used inside async function(mandatory)
+
+                promises function :
+                promise.race();
+                =============
+                   - it collects multiple promises multiple promisesin array format
+                   - It returns single result
+                   - First win , final value
+                   - It won't wait for all promises to complete 
+                
+                prmise.all();
+                =============
+                        - It collects multiple promises in array format
+                        - It result promises in array format , when all promises are in resolve state
+                        - If any promise is rejected it execute catch block as error
+                
+                promises.allSettled();
+                ======================
+                        - It collect multiple promise in array format
+                        - It result promises in array format, in the form of object which consists state and value
+                        
+
+
                 ==================================================================================================
+                object:
+                =======
+                     - real world entity which is the combination of properties/data/variables and functions
+                        - data is stored in the form of key and value pair 
+                        - object is enclosed in {}
+                        syntax: 
+                                {
+                                "key1":value1,
+                                "key2":value2
+                                }
+                note: In JS every object consists of prototype
+
+                creation of objects:
+                                1.Constructor function
+                                2.Class and Constructor
+                                3.Object literal
+                                4.Object.create()
 
                 6.Constructor function :
                                 useds to create Object 
-                                -Object - real world entity
-                                        - data is stored in the form of key and valur pair 
-                                        - object is enclosed in {}
-                                        syntax: 
-                                                {
-                                                "key1":value1,
-                                                "key2":value2
-                                                }
+                                
                         syntax : 
                         function FunctionName(ar1,arg2,arg3...){
                         this.arg1=arg1;
@@ -383,4 +415,33 @@ Functions:
 
                         new FunctionName(val1,val2,val3...)//caller
                 Note: indicates the current object
-                ===================================================================================
+                2. class and constructor:
+                                -it is a template for creating objects
+
+                syntax:
+                        class Classname{
+                                Constructor(arg1,arg2){
+                                        this.arg1=arg1;
+                                        this.arg2=arg2;
+                                }
+                        }
+                        let name=new Classname("value1","value2")
+                        console.log(name)
+
+                3.Object literal:(static way)
+                        syntax:
+                                let varname={
+                                        k=v;
+                                        k1=v2;
+
+                                }
+                
+                4.object.create():
+
+                        const obj={
+                                key1=val
+                        }
+
+                        let new=object.create(obj name);
+
+                        let newobj

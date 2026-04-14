@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <script>
+        // let Animal={
+        //     color:"white"
+        // }
+        // console.log(Animal);//key -value pair
+        
+
+        function Students(firstname,lastname,yearofbirth){
+            this.firstname=firstname;
+            this.lastname=lastname;
+            this.yearofbirth=yearofbirth;
+            //functions
+            this.age=()=>{
+                return new Date().getFullYear()-this.yearofbirth;
+            }
+        }
+
+        let s1=new Students("Mohammed","Sarvar",2005);
+        console.log(s1);
+        
+        console.log(s1.firstname);
+        console.log(s1.lastname);
+        console.log(s1.yearofbirth);
+        console.log(s1.age());
+        // to add a property to the constructor function we can use prototype
+        Students.prototype.fullname=function(){
+            return this.firstname + " " + this.lastname;
+        }
+        console.log(s1.fullname());
+
+
+        Students.prototype.nationality="indian";
+        console.log(s1.nationality);
+        
+    </script>
+</body>
+</html>

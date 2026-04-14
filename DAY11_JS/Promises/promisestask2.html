@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises task 2</title>
+</head>
+<body>
+    <script>
+        // let p1=new Promise((resolve)=>{
+        //     setTimeout(()=>{
+        //         resolve("Promise 1 resolved")
+        //     },2000) 
+        //     })
+        // let p2=new Promise((resolve)=>{
+        //     setTimeout(()=>{
+        //         resolve("Promise 2 resolved")
+        //     },4000) 
+        //     })
+
+        // // let p3=new Promise((resolve ,reject)=>{
+        // //     setTimeout(()=>{
+        // //         reject("Promise 3 rejected")
+        // //     },1000) 
+        // //     })
+        //     Promise.race([p1,p2])
+        //     .then(
+        //         (message)=>{
+        //             console.log("winner: " +  message)
+        //     })
+        //     .catch((error)=>{
+        //         console.log("error: " + error)
+        //     })
+        
+        
+        // making a chicken biryani using promises
+        let p1=Promise.resolve("Rice is ready");
+        let p2=Promise.resolve("Chicken is ready");
+        let p3=Promise.reject("cutting onions is ready");
+        let p4=Promise.resolve("Biryani is Ready");
+
+        // Promise.all([p1,p2,p3,p4])
+        // .then((message)=>{
+        //     console.log("biryani status: " + message)
+        // })
+        // .catch((error)=>{
+        //     console.log("error: " , error)
+        // })
+
+        Promise.allSettled([p1,p2,p3,p4])
+        .then((result)=>{
+            console.log("biryani status: " + result)
+        })
+        .catch((error)=>{
+            console.log("error: " , error)}
+            );
+    </script>
+</body>
+</html>

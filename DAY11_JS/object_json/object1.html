@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        // constructor function to create an object before es6
+        function person(){
+
+        }
+        let p=new person();
+        console.log(p); // person {}
+
+
+        
+        // creating an object using object literal
+        function person2(name,age,city){
+                this.name= name,
+                this.age= age,
+                this.city= city
+            };
+    
+        let person1=new person2("sarvar",25,"Hyderabad");   
+        console.log(person1); // { name: 'sarvar', age: 25, city: 'Hyderabad' } 
+
+
+
+
+        console.log('===================After Ec6 ==================');
+        
+        // after es6 we can create an object using class
+        class person3{
+            constructor(name,age,city){
+                this.name= name,
+                this.age= age,
+                this.city= city
+            }
+        }
+        let p3=new person3("sarvar",25,"Hyderabad");
+        console.log(p3); // { name: 'sarvar', age: 25, city: 'Hyderabad' }
+
+
+        console.log("=======self creating object============");
+        
+        //objecct iterals
+        let p4={
+            name:"sarvar",
+            age:25,
+            city:"Hyderabad"
+        }
+        console.log(p4); // { name: 'sarvar', age: 25, city: 'Hyderabad' }
+
+        // create .create()
+        console.log("=====creating a object with pre-existing object========");
+        
+        let p5=Object.create(p3);
+        console.log(p5); // { name: 'sarvar', age: 25, city: 'Hyderabad' }
+
+
+
+
+    </script>
+</body>
+</html>
