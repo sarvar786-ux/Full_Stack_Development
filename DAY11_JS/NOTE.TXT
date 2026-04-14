@@ -261,3 +261,126 @@ for loop:
         For (declare and initilize ; condition ; updation){
                 
         }
+=============================================================================
+Functions:
+----------
+        - It is a block of code {}
+        - creating a function once and use/calling function many times
+        - avoid code repeatation 
+        - improve readability
+        - easy to maintain and debug
+        - code reusability
+
+        Types:
+                based on the arguments and parameter:
+                                                1.Argumented / Parameterized Functions
+                                                 function function_name(arg1,arg2,arg3){
+
+                                                 }
+                                                2.No Argumented / non Parameterized Function
+                                                 function function_name(){
+
+                                                 }
+                                                - To execute the same code everytime
+
+
+                1. Function declaration:
+                ------------------------
+                syntax:
+
+                function function_name(){
+                        // code
+                }
+                function_name();//caller
+                note: without calling a function_name it won't execute the code
+                2. Function Expression:
+                -----------------------
+                syntax:
+                 
+
+                let variable/functionreference=funtion(){
+                        //code
+                }
+                functionreference();//caller
+
+                3. Arrow function:
+                        syntax:
+                         let ref =()=>{
+                                //code
+                         }
+                         ref(); //caller
+
+                4. Anonymous function:
+                        a function without name , arrow function  and function expression  will  act like Anonymous
+
+                        syntax:
+                        
+                        setTimeOut(()=>{
+
+                        },timeout in sec);
+                5. call back function:
+                                a function passing through a arguments in another function 
+                        syntax:
+                        function f1(){
+
+                        }
+                        function f2(){
+
+                        }
+                        function mainfunction(){
+
+                        }
+                        mainfunction(10,20,f1,f2);
+                call by hell / or pyramid of doom:
+                ---------------------------------
+                this is a situation where we have multiple call back (nested function)
+                - hard to maintain 
+                - hard to read 
+                - hard to debug 
+
+                use: we are dealing with time so the language it is behaves like asynchronous 
+                so won't get excepted output to get the output as excepted we use this call back hell  
+                
+                
+                Promises:
+                =========
+                - It is an Object , used to handle asynchornous operations
+
+                states:
+                        1.pending  -- starting /initial state
+                        2.fulfilled -- if operation is success/resolve
+                        3.Rejected  -- if operation if failed
+
+
+                promises can be handle in two ways:
+
+                1.then and catch
+                then()-- a function ,which is used to handle success of a promise
+                catch()-- a function , which is used to deal with failure of a promise 
+                finally()--a function , which executes even if we get success or failre
+                
+                2.async and await
+                async is a function which hold a promises 
+                await is a keyword used to wait for a promise to resolve 
+                await is used inside async function(mandatory)
+                ==================================================================================================
+
+                6.Constructor function :
+                                useds to create Object 
+                                -Object - real world entity
+                                        - data is stored in the form of key and valur pair 
+                                        - object is enclosed in {}
+                                        syntax: 
+                                                {
+                                                "key1":value1,
+                                                "key2":value2
+                                                }
+                        syntax : 
+                        function FunctionName(ar1,arg2,arg3...){
+                        this.arg1=arg1;
+                        this.arg2=arg2;
+                        }
+
+                        new FunctionName(val1,val2,val3...)//caller
+                Note: indicates the current object
+                ===================================================================================

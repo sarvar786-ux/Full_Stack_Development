@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back hell 2</title>
+</head>
+<body>
+    <script>
+
+        // prepare  water
+        function step1(callback) {
+            setTimeout(() => {
+                console.log(" water is ready");
+                callback();
+            }, 5000);
+        }
+
+        // prepare sugar
+        function step2(callback) {
+            setTimeout(() => {
+                console.log("Sugar is ready");
+                callback();
+            }, 3000);
+        }
+
+        // prepare ice
+        function step3(callback) {
+            setTimeout(() => {
+                console.log("Ice is ready");
+                callback();
+            }, 3000);
+        }
+
+        // mix all ingredients
+        function step4() {
+            setTimeout(() => {
+                console.log("Lemon water is ready");
+            }, 6000);
+        }
+        
+        // call back hell/pyramid of doom
+        step1(()=>{
+             step2(()=>{
+                 step3(()=>{
+                     step4();
+                 });
+             });
+            });
+    </script>
+</body>
+</html>

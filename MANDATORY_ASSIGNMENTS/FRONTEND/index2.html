@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Menu Card</title>
+
+<style>
+body {
+    background-color: #111;
+    font-family: "Times New Roman", serif;
+    color: #f5c542;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    border: 3px solid #555;
+    padding: 10px;
+}
+
+.title {
+    background: yellow;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.card {
+    border: 2px solid #555;
+    padding: 5px;
+}
+
+.card h2 {
+    text-align: center;
+    border: 1px solid #555;
+    padding: 5px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 5px;
+    text-align: left;
+}
+
+th {
+    text-align: center;
+}
+
+.price {
+    text-align: right;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="title">MENUCARD</div>
+
+    <div class="grid">
+
+        <!-- PURE VEG -->
+        <div class="card">
+            <h2>PURE VEG</h2>
+            <img src="./p1.jpg" alt="">
+            <table>
+                <tr><th>Menu</th><th>Price</th></tr>
+                <tr><td>Mutter Paneer</td><td class="price">200</td></tr>
+                <tr><td>Shahi Paneer</td><td class="price">220</td></tr>
+                <tr><td>Kajoo Masala</td><td class="price">220</td></tr>
+                <tr><td>Palak Paneer</td><td class="price">180</td></tr>
+                <tr><td>Veg Kolhapuri</td><td class="price">160</td></tr>
+                <tr><td>Dal Tadka</td><td class="price">150</td></tr>
+                <tr><td>Bhendi Fry</td><td class="price">170</td></tr>
+            </table>
+        </div>
+
+        <!-- BREADS -->
+        <div class="card">
+            <h2>BREAD'S</h2>
+            <img src="./p2.jpg" alt="">
+            <table>
+                <tr><th>Menu</th><th>Price</th></tr>
+                <tr><td>Tanduri Roti</td><td class="price">20</td></tr>
+                <tr><td>Lachha Paratha</td><td class="price">30</td></tr>
+                <tr><td>Butter Naan</td><td class="price">25</td></tr>
+                <tr><td>Roomali Roti</td><td class="price">10</td></tr>
+                <tr><td>Aloo Paratha</td><td class="price">50</td></tr>
+                <tr><td>Plain Naan</td><td class="price">20</td></tr>
+                <tr><td>Garlic Naan</td><td class="price">30</td></tr>
+            </table>
+        </div>
+
+        <!-- NON VEG -->
+        <div class="card">
+            <h2>NON-VEG</h2>
+            <img src="./p3.jpg" alt="">
+            <table>
+                <tr><th>Menu</th><th>Price</th></tr>
+                <tr><td>Butter Chicken</td><td class="price">350</td></tr>
+                <tr><td>Kadai Chicken</td><td class="price">250</td></tr>
+                <tr><td>Chicken Curry</td><td class="price">300</td></tr>
+                <tr><td>Fish Curry</td><td class="price">400</td></tr>
+                <tr><td>Egg Curry</td><td class="price">150</td></tr>
+                <tr><td>Chicken Handi sp</td><td class="price">270</td></tr>
+                <tr><td>Prawns fry</td><td class="price">450</td></tr>
+            </table>
+        </div>
+
+        <!-- RICE -->
+        <div class="card">
+            <h2>RICE</h2>
+            <img src="./p4.jpg" alt="">
+            <table>
+                <tr><th>Menu</th><th>Price</th></tr>
+                <tr><td>Jeera Rice</td><td class="price">130</td></tr>
+                <tr><td>Veg Pulao</td><td class="price">130</td></tr>
+                <tr><td>Plain Rice</td><td class="price">90</td></tr>
+                <tr><td>Biryani</td><td class="price">150</td></tr>
+                <tr><td>Tawa Pulao</td><td class="price">100</td></tr>
+                <tr><td>Paneer Pulao</td><td class="price">140</td></tr>
+                <tr><td>Mutter Pulao</td><td class="price">140</td></tr>
+                <tr><td>Chicken Pulao</td><td class="price">210</td></tr>
+            </table>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="card">
+            <h2>CHINESE</h2>
+            <img src="./p5.jpg" alt="">
+            <table>
+                <tr><th>Menu</th><th>Full</th><th>Half</th></tr>
+                <tr><td>Noodles</td><td>140</td><td>70</td></tr>
+                <tr><td>Manchurian</td><td>130</td><td>65</td></tr>
+                <tr><td>Fried Rice</td><td>100</td><td>50</td></tr>
+                <tr><td>Machew Soup</td><td>90</td><td>-</td></tr>
+                <tr><td>Szechwan Chilli</td><td>160</td><td>80</td></tr>
+                <tr><td>Szechwan Noodles</td><td>160</td><td>80</td></tr>
+                <tr><td>Szechwan Fried Rice</td><td>160</td><td>80</td></tr>
+                <tr><td>Chicken manchow soup</td><td>170</td><td>90</td></tr>
+            </table>
+        </div>
+
+        <!-- SOUTH INDIAN -->
+        <div class="card">
+            <h2>SOUTH - INDIAN</h2>
+            <img src="./p6" alt="">
+            <table>
+                <tr><th>Menu</th><th>Price</th></tr>
+                <tr><td>Plain Dosa</td><td class="price">35</td></tr>
+                <tr><td>Masala Dosa</td><td class="price">45</td></tr>
+                <tr><td>Vada Sambar</td><td class="price">40</td></tr>
+                <tr><td>Idli Sambar</td><td class="price">50</td></tr>
+                <tr><td>Pulihora</td><td class="price">110</td></tr>
+                <tr><td>Uttapa</td><td class="price">70</td></tr>
+                <tr><td>Loni-Spanj dosa</td><td class="price">60</td></tr>
+                <tr><td>Rasam - Rice</td><td class="price">50</td></tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

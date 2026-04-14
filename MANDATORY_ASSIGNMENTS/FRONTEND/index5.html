@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Layout</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, pink, purple);
+      font-family: Arial, sans-serif;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .row_bottom{
+        display: flex;
+        justify-content: space-between;
+        gap: 90px;
+    }
+    .large-box {
+      width: 120px;
+      height: 120px;
+      background-color: gold;
+      border: 2px solid black;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .small-boxes-top {
+      display: flex;
+      /* justify-content: start; */
+    }
+    ._1{
+      justify-content: start;
+    }
+    ._2{
+     justify-content: center;
+    }
+    ._3{
+        justify-content: end;
+    }
+    ._4,._6{
+        justify-content: space-around;
+    }
+    ._5{
+        justify-content: space-between;
+    }
+    ._9 ,._10 ,._11 ,._12{
+        display: flex;
+    }
+    ._15{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+    ._12{
+        justify-content: flex-end;
+    }
+    ._13{
+        justify-content: center;
+        align-items: center;
+    }
+    ._14{
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .small-box {
+      width: 30px;
+      height: 30px;
+      background-color: skyblue;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top row: 8 large boxes -->
+  <div class="row">
+    <!-- Repeat 8 times -->
+    <div class="large-box">
+      <div class="small-boxes-top _1">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box">Box3</div>
+      </div>
+    </div>
+    <div class="large-box">
+      <div class="small-boxes-top _2">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+    <div class="large-box">
+      <div class="small-boxes-top _3">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+    <div class="large-box">
+      <div class="small-boxes-top _4">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+    <div class="large-box">
+      <div class="small-boxes-top _5">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+    <div class="large-box">
+      <div class="small-boxes-top _6">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+    <div class="large-box">
+      <div class="small-boxes-top _7">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom row: 4 large boxes -->
+  <div class="row_bottom">
+    <!-- Repeat 4 times -->
+    <div class="large-box _15">
+      <div class="small-boxes-bottom _9">
+        <div class="small-box ">Box1</div>
+        <div class="small-box">Box2</div>
+        <div class="small-box">Box3</div>
+      </div>
+    </div>
+    <div class="large-box _12">
+      <div class="small-boxes-bottom _10">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+    <div class="large-box _13">
+      <div class="small-boxes-bottom _11">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+    <div class="large-box _14">
+      <div class="small-boxes-bottom _12">
+        <div class="small-box ">Box1</div>
+        <div class="small-box ">Box2</div>
+        <div class="small-box ">Box3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

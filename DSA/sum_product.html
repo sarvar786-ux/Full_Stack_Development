@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum_product</title>
+</head>
+<body>
+    <script>
+        function sumofdigit(num){
+            let sum=0;
+            let temp=num;
+            while(num>0){
+                let rem=num%10;
+                sum+=rem;
+            num=Math.floor(num/10);
+            }
+            console.log("sum of digit" , temp,"is",sum);
+            
+        }
+
+        function productofdigit(num){
+            let prod=1;
+            let temp=num;
+            while(num>0){
+                let rem=num%10;
+                prod*=rem;
+            num=Math.floor(num/10);
+            }
+            console.log("product of digit",temp,"is",prod); 
+        }
+
+        sumofdigit(153)
+        setTimeout(() => {
+            productofdigit(153)
+        },5000);
+    </script>
+</body>
+</html>

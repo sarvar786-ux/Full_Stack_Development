@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back hell</title>
+</head>
+<body>
+    <script>
+        // prepare lemon water
+        function step1() {
+            setTimeout(() => {
+                console.log("Lemon water is ready");
+            }, 5000);
+        }
+
+        // prepare sugar
+        function step2() {
+            setTimeout(() => {
+                console.log("Sugar is ready");
+            }, 3000);
+        }
+
+        // prepare ice
+        function step3() {
+            setTimeout(() => {
+                console.log("Ice is ready");
+            }, 3000);
+        }
+
+        // mix all ingredients
+        function step4() {
+            setTimeout(() => {
+                console.log("Lemonade is ready");
+            }, 6000);
+        }
+        // excepted output is step1, step2, step3, step4 -----synchronous code
+        // reason --- we are not getting the result as expected because of asynchronous code, 
+        // so we have to use call back function to get the result as expected
+        // because we are dealing with time -- it becomes asynchronous code, 
+        // so we have to use call back function to get the result as expected
+
+        
+        // call back hell
+        step1();
+        step2();
+        step3();
+        step4();
+    </script>
+</body>
+</html>
