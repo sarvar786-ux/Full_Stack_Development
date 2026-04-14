@@ -404,8 +404,9 @@ Functions:
                                 3.Object literal
                                 4.Object.create()
 
-                6.Constructor function :
-                                useds to create Object 
+                1.Constructor function :
+                ----------------------
+                               - useds to create Object 
                                 
                         syntax : 
                         function FunctionName(ar1,arg2,arg3...){
@@ -416,6 +417,7 @@ Functions:
                         new FunctionName(val1,val2,val3...)//caller
                 Note: indicates the current object
                 2. class and constructor:
+                -------------------------
                                 -it is a template for creating objects
 
                 syntax:
@@ -429,6 +431,7 @@ Functions:
                         console.log(name)
 
                 3.Object literal:(static way)
+                -----------------------------  
                         syntax:
                                 let varname={
                                         k=v;
@@ -437,11 +440,26 @@ Functions:
                                 }
                 
                 4.object.create():
-
+                ------------------
                         const obj={
                                 key1=val
                         }
 
                         let new=object.create(obj name);
 
-                        let newobj
+                        - it is a way of creating a new object based on exosting object (inheritance)
+                        - Thus , it can share the properties and functioms of the existing object --- prototype
+
+                prototype:
+                -----------
+                        - it is a property of an object
+                        - it allow other object to inherit /sharing properties and functions
+                        - it helps to add new prperties and functions into object
+                        - it helps tp create a prototype chain between object
+
+                prototype chaining:
+                ------------------
+                        -it is a chain of object
+                        - it can achieve using Object.create()
+
+                ========================================================================================================
