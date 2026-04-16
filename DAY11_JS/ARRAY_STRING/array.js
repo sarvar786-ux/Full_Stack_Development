@@ -89,46 +89,73 @@
 // arr2.splice(1,2);
 // console.log(arr2);
 
-let arr=['hello','student','welcome', 'to', 'EXCELR', 'class'];
+// let arr=['hello','student','welcome', 'to', 'EXCELR', 'class'];
 
 
-console.log("========while loop==============");
+// console.log("========while loop==============");
 
-let index=0;
-while(arr.length>index){
-    console.log(arr[index]);
-    index++;
-}
-console.log("========using for loop==========");
+// let index=0;
+// while(arr.length>index){
+//     console.log(arr[index]);
+//     index++;
+// }
+// console.log("========using for loop==========");
 
-for(let index=0;index<arr.length;index++){
-    console.log(arr[index]);
-};
+// for(let index=0;index<arr.length;index++){
+//     console.log(arr[index]);
+// };
 
-console.log("======do while loop==========");
+// console.log("======do while loop==========");
 
-let i=0;
-do{
-    console.log(arr[i]);
-    i++;
-}while(i<arr.length);
-
-
-console.log("==========for each function=========");
-// NO NEED OF INDEXING IN FOR EACH LOOP
-arr.forEach(
-    (value)=>{
-        console.log(value);
-    }   
-)
-console.log("========for in==========");
+// let i=0;
+// do{
+//     console.log(arr[i]);
+//     i++;
+// }while(i<arr.length);
 
 
-for (const index in arr) {
-    console.log(arr[index]);
-}
-console.log('===========for of=========');
+// console.log("==========for each function=========");
+// // NO NEED OF INDEXING IN FOR EACH LOOP
+// arr.forEach(
+//     (value)=>{
+//         console.log(value);
+//     }   
+// )
+// console.log("========for in==========");
 
-for (const value of arr) {
-    console.log(value);
-}
+
+// for (const index in arr) {
+//     console.log(arr[index]);
+// }
+// console.log('===========for of=========');
+
+// for (const value of arr) {
+//     console.log(value);
+// }
+
+
+let arr=[1,2,3,4,5];
+       // 1 4 9 16 25
+arr.forEach((value)=>{console.log(value * value );});
+
+let squaredArray=arr.map((value)=>{return value * value * value;}); // it will return a new array with the squared values of the original array
+console.log(squaredArray);
+
+
+// for filtering the even values from the array
+// arr.forEach((value)=>{
+//     if(value % 2 === 0){
+//         console.log(value);
+//     }
+// });
+let evenArray=arr.filter((value)=>{return value % 2 === 0;}); // it will return a new array with the even values of the original array
+console.log(evenArray);
+
+// filter and return first even value from the array
+let find=arr.find((value)=>{return value % 2 === 0;})
+console.log(find);
+
+// filter and return true when it is matching with all values of the array
+let every=arr.every((value)=>{return value % 2 === 0;})
+console.log(every);
+ 

@@ -654,4 +654,14 @@ Functions:
 
                                 }
                         )
+                map():
+                     - it is a callback function 
+                     - it help to process the data (data manipulation /processing)
+                     - it returns new array which is same size as input array 
+                syntax:
+                 arr.filter(
+                        (value,index,arr)=>{
+                                return condition;
+                        }
+                 )
                 
