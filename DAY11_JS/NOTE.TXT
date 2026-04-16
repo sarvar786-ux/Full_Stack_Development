@@ -463,3 +463,195 @@ Functions:
                         - it can achieve using Object.create()
 
                 ========================================================================================================
+                object methods:
+                ---------------
+                        object.keys()-----returns keys in array format
+                        object.values()---returns values in array format
+                        object,entries()--returns key values pair in array format
+                JSON:(JavaScript Object notation)
+                =====
+                - it is a plain text, lightweight data interchange text
+                - used to store data(noSQL) and exchange data (client<--->server)
+
+
+                                JS Object                       JSON Object
+                -------------------------------------------------------------------------------------
+                syntax           flexible and dynamic             fixed/strict and static
+
+                keyQoutes        optional                          mandatory     
+
+                JSON RULES:
+                ----------
+                - key must be indicated with double Qoutes
+                - keys must be unique
+                - Json Object need to enclosed in {} 
+                - Json array need to enclosed in []
+
+                Json Types:
+                ----------
+                1.Json Object
+                2.Json Array
+                3.Nested Json 
+
+                accessing the values :
+                --------------------
+                        - can access by using .notaion or [] notation
+
+                re-assign/re-intilize the values:
+                ---------------------
+                        obj.key=newValue  or obj['key']=newValue
+
+                delete a value:
+                ---------------
+                        delete obj.key   or delete obj['key]
+
+                merge of objects
+                -----------------
+                        -merging/combining the objects using ...(spread operator ) or Object.assign()
+                        Note: while merging keys must be uniques , if same key is present in both the objects 
+                                it prefers second object data
+                adding the key-value pair
+                ------------------------
+                        - use .notation or [] notation or ... (spread operator) or Object.assign
+
+                Destructing the Object:
+                -----------------------
+                        -it is a super way for accessing , adding  or assigning values, renaming keys
+                        -it makes code cleaner,resuable,simple
+
+                syntax:
+
+                const user={
+                "name":"raj",
+                "email":"raj@gmail.com"
+                }
+                console.log(user.name);
+
+
+                let {name,email}=user;
+                console.log(name);
+
+
+
+                Object methods:
+                --------------
+                Object.keys()-- returns keys in array format
+                Object.values()---returns values in array format
+                Object.entries()---return key-value pair in array format
+
+                Iterating the object key-values:
+                ------------------------------
+                - for in loop
+                        syntax:
+                                for(let key in Obj){
+                                //logic
+                                }
+                - forEach function
+                        obj.forEach(
+                                (key)=>{
+                                // logic 
+                                }
+                        )
+
+                Array Manipulation:[read,update,delete,add]
+                -------------------        
+                Array:
+                ======
+                        - array is a collection of a values/items/elements
+                        - It is used to store multiple values in single variable /reference
+                        - array can accept same data type or different data types 
+                        - array is mutable(can be modifed after creating)
+                        - arrays is enclosed in []
+                        - array store values in index position
+                        
+                        syntax= let arr=[1, 2, 3] ---size /length =3
+                                         0, 1, 2  ---indexing position
+                Array creation:
+                ---------------
+                                1. Array literal
+                                2. Array Constructor and new keyword
+                                3. Array.from
+                                4. Array.of
+                                //creating an array using array literal
+                                let arr=[1,2,3,4,5];
+                                console.log(arr);
+                                console.log(arr.length);  //length of the array
+
+                                // accessing the elements of the array
+                                console.log(arr[0]);
+                                console.log(arr[2]);
+                                console.log(arr[-3]); // it will return undefined because the index starts from 0 and it does not consider negative index
+
+                                // creating an array with different data types
+
+                                let arr2=[10,2,{name:"john",age:30},[1,2,3]];
+                                console.log(arr2);
+
+
+                                //using new keyword
+                                let arr3=new Array(1,2,3,4,5);
+                                console.log(arr3);
+                                // it is consider as array but the length of the array is equal to 5 because it consider the whole array as one element
+                                let arr4=new Array(5);
+                                console.log(arr4);
+
+                                // from function
+                                let values="Sarvar";
+                                let arr5=Array.from(values);
+                                console.log(arr5);// it will return an array of characters from the string "Sarvar"
+
+
+                                let arr6=Array.of(10,20);
+                                console.log(arr6); // it will return an array with the elements 10 and 20
+
+                                let arr7=Array.of(5);
+                                console.log(arr7); // it will return an array with the element 5
+
+                Accessing/reading a value:
+                -------------------------
+                                - through index position
+                                - through at function 
+                                let arr=[1, 2, 3]
+                                         0  1  2  +ve indexing
+                                         -3 -2 -1 -ve indexing                                
+
+                Adding a value:   (we can change the size of the array)
+                ---------------
+                                - through index position 
+                                - push  (value) add the element to last position
+                                - shift (value) add the element at starting position
+
+
+                delete a value in array:
+                ------------------------
+                                - delete keyword -- there won't be any change in sixe it will make the value is empty
+                                - pop() -- removes element at last position and returns deleted value
+                                - shift() -- removes element at start position and return the delete value
+
+                updating a value:
+                -----------------
+                                - through index position
+                                - array functions
+
+
+                Iterate an Arrays:
+                -----------------
+                                while loop       --index
+                                do while loop    --index
+                                for loop         --index
+                                for in loop      --index
+                                for of loop      --value/element
+
+                forEach():
+                ----------
+                          - it us a call back function 
+                          - which will accept a Function , contain 3 arguments
+                          - 1args--value (mandatory),2 args--index ,3 args--arr
+
+                   syntax:
+                        arr.forEach(
+                                (value, index, arr)=>{
+
+                                }
+                        )
+                
