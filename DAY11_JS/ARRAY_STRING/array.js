@@ -159,3 +159,6 @@ console.log(find);
 let every=arr.every((value)=>{return value % 2 === 0;})
 console.log(every);
  
+//filter and return true when it is matching with at least one value of the array
+let findlast=arr.findLast((value)=> value % 2 === 0);
+console.log(findlast);

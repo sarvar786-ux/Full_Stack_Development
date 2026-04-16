@@ -655,6 +655,7 @@ Functions:
                                 }
                         )
                 map():
+                ------
                      - it is a callback function 
                      - it help to process the data (data manipulation /processing)
                      - it returns new array which is same size as input array 
@@ -664,4 +665,25 @@ Functions:
                                 return condition;
                         }
                  )
-                
+                find()--- predicate function
+                ----------
+                     - it is a callback function 
+                     - it help to filter the data and return first watching result
+                     - it returns single value 
+                syntax:
+                 arr.find(
+                        (value,index,arr)=>{
+                                return condition;
+                        }
+                 )
+                findLast()--- predicate function
+                -----------
+                     - it is a callback function 
+                     - it help to filter the data and return last watching result
+                     - it returns single value 
+                syntax:
+                 arr.findLast(
+                        (value,index,arr)=>{
+                                return condition;
+                        }
+                 )
