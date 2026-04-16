@@ -687,3 +687,29 @@ Functions:
                                 return condition;
                         }
                  )
+                every(): --predicate function
+                --------
+                        - if is a callback function 
+                        - it helps to filter the data and returns boolean values  
+                        - if all the values are satistfying with the condition it returns true
+                        - it return a boolean value
+                 syntax:
+                   arr.every{
+                        (value,index,arr)=>{
+                                return condition;
+                        }
+                   }
+
+                some(): --predicate function
+                --------
+                        - if is a callback function 
+                        - it helps to filter the data and returns boolean values  
+                        - if all the values are satistfying with the condition it returns true
+                        - if none of the values are not satistfying with the condition , then it return false
+                        - it return a boolean value
+                 syntax:
+                   arr.some{
+                        (value,index,arr)=>{
+                                return condition;
+                        }
+                   }
