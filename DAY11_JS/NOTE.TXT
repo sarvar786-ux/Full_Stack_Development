@@ -665,6 +665,25 @@ Functions:
                                 return condition;
                         }
                  )
+                reduce():
+                ---------
+                        - It is a call back function 
+                        - It return a single calue by performing operation on each elements of an array
+                syntax:
+                        arr.reduce(callback,intialvalue)
+
+                        function callback(accumulator,current value,currentIndex ,array){
+                                return accumalator
+                        }
+                accumalator is used to store values /result of operation
+                accumator anf current value are mandatory in callback
+
+                reverse():
+                ----------
+                        - It is used to print the array in reverse order 
+                        - It help to reverse an array moreover it will modify an input array and return the array
+
+
                 find()--- predicate function
                 ----------
                      - it is a callback function 
@@ -672,6 +691,28 @@ Functions:
                      - it returns single value 
                 syntax:
                  arr.find(
+                        (value,index,arr)=>{
+                                return condition;
+                        }
+                 )
+                 findindex()--- predicate function
+                ----------
+                     - it is a callback function 
+                     - it help to filter the data and return first matching result index position
+                     - it returns single value (index position)
+                syntax:
+                 arr.findindex(
+                        (value,index,arr)=>{
+                                return condition;
+                        }
+                 )
+                 findLastindex()--- predicate function
+                ----------
+                     - it is a callback function 
+                     - it help to filter the data and return first matching result index position
+                     - it returns single value (index position)
+                syntax:
+                 arr.findLast(
                         (value,index,arr)=>{
                                 return condition;
                         }
@@ -713,3 +754,61 @@ Functions:
                                 return condition;
                         }
                    }
+
+                splice():
+                --------
+                        - it helps to delete and modify the data in an array
+                        - it won't modify the input/original array
+                         syntax:
+                                arr.splice(startindexposition, deletecount , update value);
+                                
+                                arr,splice(startindexposition) --it will delete a single value
+                                arr.splice(startindexposition,declaration) ---from indexposition, it will delete values vased on constructor
+                                arr.splice(startindexposition,deletecount,updatevalue)--it will delete the data 
+                                        in the place of delete data it add newa data /update data
+                
+                slice():
+                --------
+                        - it helps to extract /provide shallow copy from original Array
+                        - it won't modified input array
+                        - it return a new array (shallow copy)
+                        syntax:
+                                arr.slice(startindex,end index)
+
+                                arr.slice(startindex)-- from startindex to end it tries to extract
+                                arr.slice(startindex) --- it extract from startindex to endindex
+
+                        note:  start index -- inclusive
+                                end index  -- exclusive
+
+                string:
+                -------
+                        -it is a collection of character
+                
+
+                tostring(): it convert array into string and each values can be join by ,(comma)
+                join(character):it converts array into string and eaxh value canbe join with special character
+
+                padstart (size, character):it hepls to add cahracter at starting of the steing based on size
+                padend(size,character):it helps to add character at ending of a dtring based on soze
+
+                trim()--removeswhitespaces
+                trimstart
+
+
+
+                sorted():
+                ----------
+                        -it helps to sort unorder Data 
+                        syntax:
+                                strArr.sort()--->  alphabetical order
+                                arr.sort (compareFinction)---custom orderimg
+                                for ascending order:
+                                                arr.sort ((a,b)=>a-b)
+                                for decending order:
+                                                arr.sort((a,b)=>b-a)
+                
+                conditon                result
+                a-b<0                   a comes before b
+                a-b>0                   b ocmes before a // swapping 
+                a-b=0                   no change

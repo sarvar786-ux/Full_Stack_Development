@@ -134,31 +134,93 @@
 // }
 
 
-let arr=[1,2,3,4,5];
-       // 1 4 9 16 25
-arr.forEach((value)=>{console.log(value * value );});
+// let arr=[1,2,3,4,5];
+//        // 1 4 9 16 25
+// arr.forEach((value)=>{console.log(value * value );});
 
-let squaredArray=arr.map((value)=>{return value * value * value;}); // it will return a new array with the squared values of the original array
-console.log(squaredArray);
+// let squaredArray=arr.map((value)=>{return value * value * value;}); // it will return a new array with the squared values of the original array
+// console.log(squaredArray);
 
 
-// for filtering the even values from the array
-// arr.forEach((value)=>{
-//     if(value % 2 === 0){
-//         console.log(value);
-//     }
-// });
-let evenArray=arr.filter((value)=>{return value % 2 === 0;}); // it will return a new array with the even values of the original array
-console.log(evenArray);
+// // for filtering the even values from the array
+// // arr.forEach((value)=>{
+// //     if(value % 2 === 0){
+// //         console.log(value);
+// //     }
+// // });
+// let evenArray=arr.filter((value)=>{return value % 2 === 0;}); // it will return a new array with the even values of the original array
+// console.log(evenArray);
 
-// filter and return first even value from the array
-let find=arr.find((value)=>{return value % 2 === 0;})
-console.log(find);
+// // filter and return first even value from the array
+// let find=arr.find((value)=>{return value % 2 === 0;})
+// console.log(find);
 
-// filter and return true when it is matching with all values of the array
-let every=arr.every((value)=>{return value % 2 === 0;})
-console.log(every);
+// // filter and return true when it is matching with all values of the array
+// let every=arr.every((value)=>{return value % 2 === 0;})
+// console.log(every);
  
-//filter and return true when it is matching with at least one value of the array
-let findlast=arr.findLast((value)=> value % 2 === 0);
-console.log(findlast);
+// //filter and return true when it is matching with at least one value of the array
+// let findlast=arr.findLast((value)=> value % 2 === 0);
+// console.log(findlast);
+
+// // filter and return some value if the condition is true
+// let some=arr.some((value)=>{return value % 2 === 0;})
+// console.log(some);
+
+
+// let arr=[1,2,3,4,5];
+// let sum=arr.reduce(
+//        (sum, Value)=>{
+//            return sum + Value;
+//        }
+//        ,0
+// );
+// console.log(sum);
+
+// let prod=arr.reduce(
+//        (prod, Value)=>{
+//            return prod * Value;
+//        }
+//        ,1
+// );
+// console.log(prod);
+
+
+let arr=['hello','students','nice','to','meet','you'];
+// console.log(arr);
+// arr.splice(4);
+// arr.splice(2,1); // it will delete the element at index 2 and it will return the deleted element
+// arr[1]='dear'; // it will update the element at index 1
+// console.log(arr);
+
+
+// let output=arr.slice(1,4);
+// console.log(output);
+
+// console.log(arr);
+// console.log(arr.toString());
+// console.log(arr.join('-'));
+
+// let str='hello';
+// console.log(str);
+// console.log(str.padEnd(10,"*"));
+// console.log(str.padStart(10,"^"));
+
+// let str2="hello world";
+// console.log(str2);
+// // console.log(str2.trim());
+// console.log(str2.trimStart());
+// console.log(str2.trimEnd());
+
+
+// let str1="sarvar"
+// console.log(str1);
+// console.log(str1.repeat(6));
+// console.log(str1.replace('v','w')); //sarwar
+
+
+
+let str="hello ,students ,nice , to ,meet,you";
+console.log(str);
+
+console.log(str.split(','));
