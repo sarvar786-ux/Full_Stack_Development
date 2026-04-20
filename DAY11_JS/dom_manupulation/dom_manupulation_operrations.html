@@ -6,13 +6,22 @@
     <title>DOM Manipulation Operations</title>
 </head>
 <body>
-    <div id="container"></div>
+    <div id="container">
+        <div id="remove">this is removed text</div>
+    </div>
     <script>
         let container = document.getElementById("container");
         let paragraph = document.createElement("p");
         paragraph.innerHTML='<b>Document Object Model(DOM)</b>';
         paragraph.style.color = "green";
         container.append(paragraph);
+
+
+        let removed=document.querySelector("#remove"); // removes the element with id remove
+        console.log(removed);
+
+        container.removeChild(removed);
+        
     </script>
 </body>
 </html>
