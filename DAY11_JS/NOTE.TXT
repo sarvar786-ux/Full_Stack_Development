@@ -916,6 +916,11 @@ Functions:
                 4. attribute Manipulation:
                 --------------------------
                         - modifying attributr by dom Functions
-                1.setAttribute()  -- adding attribute
+                1. setAttribute()  -- adding attribute
                 2. removeAttribute -- removing Atrribute
-                
+                3. getAttribute -- access Attribute and return value
+                4. hadAttribute -- checking Attribute is exist or not  and return boolean output
+
+
+                5. css manipulation:
+                --------------------
