@@ -922,5 +922,11 @@ Functions:
                 4. hadAttribute -- checking Attribute is exist or not  and return boolean output
 
 
-                5. css manipulation:
+                5. CSS manipulation:
                 --------------------
+                        1. style - adding css (inline css)
+                        2. ClassList.add()-- adding class
+                        3. Class.List.remove -- reomve class
+                        4. ClassList.toggle -- toggling class--(on/off)
+                        5. ClassList.contain -- chacking class present or not
+                        6. getComputedStyle() -- accessinng style
