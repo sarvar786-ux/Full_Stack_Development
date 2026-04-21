@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css manipulation</title>
+</head>
+<style>
+        .box{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+<body>
+    <div id="div1">Adding</div>
+    <div id="div2">Removing</div>
+    <script>
+        let div1=document.querySelector('#div1')
+        console.log('div1');
+        div1.classList.add('box');
+        let div2=document.querySelector('#div2')
+        div2.classList.remove('box')
+    </script>
+</body>
+</html>
