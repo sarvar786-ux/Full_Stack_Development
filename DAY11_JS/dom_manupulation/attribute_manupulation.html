@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute_manupulation</title>
+</head>
+<body>
+    <p id="p" style="color: red;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione dolorum tempore iure?</p>
+    <img>
+    <script>
+
+        document.getElementById('p')
+        console.log(p);
+        //accessing the attribute
+        console.log(p.getAttribute('style'));
+        console.log(p.getAttribute('id'));
+        
+        // add attribute
+        let img=document.getElementsByTagName('img')
+        img[0].setAttribute('src','./image1.png')
+        img[0].setAttribute('height','200px')
+        img[0].setAttribute('width','200px')
+ 
+    </script>
+</body>
+</html>
