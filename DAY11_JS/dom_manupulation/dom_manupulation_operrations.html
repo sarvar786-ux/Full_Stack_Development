@@ -9,12 +9,15 @@
     <div id="container">
         <div id="remove">this is removed text</div>
     </div>
+
+    <div id="replace">this is old text</div>
+    <div id="clone">this is the cloned text</div>
     <script>
         let container = document.getElementById("container");
         let paragraph = document.createElement("p");
         paragraph.innerHTML='<b>Document Object Model(DOM)</b>';
         paragraph.style.color = "green";
-        container.append(paragraph);
+        container.append(paragraph); // it will add the element at the end of the container
 
 
         let removed=document.querySelector("#remove"); // removes the element with id remove
@@ -22,6 +25,24 @@
 
         container.removeChild(removed);
         
+        let heading2=document.createElement('h2');
+        heading2.innerText='Heading 2';
+        container.prepend(heading2); // it will add the element at the beginning of the container
+
+
+        let heading3=document.createElement('h3');
+        heading3.innerText='Heading 3';
+        container.insertBefore(heading3,paragraph); // it will add the element before the paragraph element
+
+        let oldText=document.querySelectorAll('#replace');
+
+        // let newText=document.createElement('p');
+        // newText.innerHTML='this is new text';
+        // container.replaceChild(newText, oldText[0]); // it will replace the old text with new text
+
+        let cloned=document.getElementById('clone');
+        let newcloned=cloned.cloneNode(true); // it will clone the element with id clone
+        container.insertBefore(newcloned, cloned); // it will add the cloned element before the new text element
     </script>
 </body>
 </html>

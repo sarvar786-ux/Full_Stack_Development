@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<form id="form">
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <button type="submit">Login</button>
+</form>
+
+<h2 id="error"></h2>
+
+<script>
+    const correctUsername = 'username';
+    const correctPassword = 'admin@123';
+
+    document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let inputUsername = document.getElementById('username').value;
+        let inputPassword = document.getElementById('password').value;
+        let h2=document.createElement('h2');
+        if (name===inputUsername){
+            if(password===inputPassword){
+                window.location.href='https://www.w3schools.com/'
+            }
+            else{
+                h2.innerHTML='password is incorrect'
+            }
+
+        }else{
+            h2.innerHTML= name +" is wrong "
+        }
+        h2.style.color='red'
+        from.prepand(h2)
+    });
+</script>
+
+</body>
+</html>

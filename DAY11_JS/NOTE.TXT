@@ -665,6 +665,17 @@ Functions:
                                 return condition;
                         }
                  )
+                filter() -- Predicate function
+                                -----
+                                - it is a callback function
+                                - It helps to filter the data(based on condition) 
+                                - It returns new array , size will change from input size
+                                syntax : 
+                                arr.filter(
+                                        (value,index,arr)=>{
+                                        return condition;
+                                        }
+                                )
                 reduce():
                 ---------
                         - It is a call back function 
@@ -728,18 +739,40 @@ Functions:
                                 return condition;
                         }
                  )
-                every(): --predicate function
+                indexOf():
+                ---------
+                        - it helps to find an element from start  in an array
+                        - if elements is present it returns index position or else it returns -1
+                        syntax:
+                        arr.indexOf(value,startIndex);
+                        - startIndex is optional
+                
+                lastIndexOf():
+                ---------
+                        - it helps to find an element  from last in an array
+                        - if elements is present it returns index position or else it returns -1
+                        syntax:
+                        arr.indexOf(value,startIndex);
+                        - startIndex is optional
+
+                includes()
                 --------
-                        - if is a callback function 
-                        - it helps to filter the data and returns boolean values  
-                        - if all the values are satistfying with the condition it returns true
-                        - it return a boolean value
-                 syntax:
-                   arr.every{
-                        (value,index,arr)=>{
-                                return condition;
-                        }
-                   }
+                        -it helps to find an element in an array
+                        -it element is present then it returns true or else retruns false
+                        syntax:
+                        arr.includes(element);
+                                every(): --predicate function
+                                --------
+                                        - if is a callback function 
+                                        - it helps to filter the data and returns boolean values  
+                                        - if all the values are satistfying with the condition it returns true
+                                        - it return a boolean value
+                                syntax:
+                                arr.every{
+                                        (value,index,arr)=>{
+                                                return condition;
+                                        }
+                                }
 
                 some(): --predicate function
                 --------
@@ -780,23 +813,16 @@ Functions:
 
                         note:  start index -- inclusive
                                 end index  -- exclusive
-
-                string:
+                fill():
                 -------
-                        -it is a collection of character
-                
+                        -it helps to fill an element in an array
+                        syntax:
+                                arr.fill(NewValue)--->it will update all values in an array with new Values
+                                arr.fill(newValue,startIndex)->it will update newValue from start index position
+                                arr.fill(newValue,startIndex,endIndex)->it will update newValue from start to end
 
-                tostring(): it convert array into string and each values can be join by ,(comma)
-                join(character):it converts array into string and eaxh value canbe join with special character
-
-                padstart (size, character):it hepls to add cahracter at starting of the steing based on size
-                padend(size,character):it helps to add character at ending of a dtring based on soze
-
-                trim()--removeswhitespaces
-                trimstart
-
-
-
+                                Note: startIndex-Inclusive
+                                endIndex-Excelusive\
                 sorted():
                 ----------
                         -it helps to sort unorder Data 
@@ -812,3 +838,84 @@ Functions:
                 a-b<0                   a comes before b
                 a-b>0                   b ocmes before a // swapping 
                 a-b=0                   no change
+                
+                
+                string:
+                -------
+                        -it is a collection of character
+                
+
+                tostring(): it convert array into string and each values can be join by ,(comma)
+                join(character):it converts array into string and eaxh value canbe join with special character
+
+                padstart (size, character):it hepls to add cahracter at starting of the steing based on size
+                padend(size,character):it helps to add character at ending of a dtring based on soze
+
+                trim()--removeswhitespaces
+                trimstart
+
+==================================================================================================================
+                BOM(browser object model):
+                --------------------------
+                        - It is a collection of objects that represents browser environment
+                        - It provides access to the browser objects like window and document
+                Use cases:
+                - Redirect to another page
+                - Open a new window/tab
+                - Access browser info , history
+                - Access browser navigation
+                - Handling timeouts and intervals
+                - Access browser cookies(session)
+                - browser alert messages
+
+                DOM(document object model)
+                -------------------------
+                                - It represents the html document structure and its content as a tree of objects
+                                - It helps to access html elements and its properties
+                                - It helps to manipulate the html elements and CSS
+                Use Cases:
+                        - Creating dynamic webpages
+                        - Manipulating html document
+                        - Create interactive web pages
+                        - Handling events
+                                                       DOM                                   BOM
+                   -------------------------------------------------------------------------
+                purpose               interact with a html document                 interact with a browser
+
+                main object                   document                                     window
+                ---------------------------------------------------------------------------------------------
+                DOM manipulation:
+                -----------------
+                                1.Access elements
+                                2. create elements
+                                3. element manipulation (adding , removing , replacing )
+                                4. attribute manipulation
+                                5. css manipulation
+                                6. event manipulation /Handling
+                1.Element  Accessing:
+                ---------------------
+                        1.getElementById(idName)-returns single element based on id name(unique)
+                        2.getElementsByClassName(className)-returns multiple elements (Html Collection)
+                        3.getElemetsByTagName(tagName)-returns multiple elements (Html Collection)
+                        4.querySelector(queryName)-returns first matching result ( basde on selector matching)
+                        5.querySelectorAll(queryName)-returns all matching results(NodeList)
+
+                2.Create Elements:
+                -----------------
+                - using createElemet function of document
+
+                3.Element Manipulation:
+                ----------------------
+                        1.append()/appendChild() -- adds elements at the end in a parent element
+                        2.prepend()----adds elements at the top in a parent element
+                        3.insertBefore(newElement, existingElement)---adds element in a respective position 
+                                                                        based on element we are providing in 2nd Arguments
+                        4.replaceChild(newText,oldText)--replace old element with new element in parent container
+                        5.cloneNode()---it helps to create an exact copy(cloned)
+                
+                4. attribute Manipulation:
+                --------------------------
+                        - modifying attributr by dom Functions
+                1.setAttribute()  -- adding attribute
+                2. removeAttribute -- removing Atrribute
+                

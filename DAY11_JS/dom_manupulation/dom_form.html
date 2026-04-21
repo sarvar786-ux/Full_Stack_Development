@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom form</title>
+    <style>
+        form{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+     <!-- create a two input 
+      1.validate with db credentials(static data) 
+      2. if the username and password is correct then navigate to www.w3schools.com
+      3. if the username or password is incorrect then display an error message 
+      -->
+    <form action="#" id="form">
+        <input type="text" name="username" id="username" placeholder="username"><br><br>
+        <input type="password" name="password" id="password" placeholder="password"><br><br>
+        <button type="submit">login</button>
+    </form>
+    <script>
+        let username='username';
+        let password='admin@123';
+        document.getElementById('form').addEventListener('submit',(event)=>{
+            event.preventDefault();
+            let inputUsername=document.getElementById('username').value;
+            let inputPassword=document.getElementById('password').value;
+            if(username===inputUsername && password===inputPassword){
+                window.location.href='https://www.w3schools.com';
+            }
+            else{
+                let h2=document.createElement('h2');
+                h2.innerText='Invalid username or password';
+                h2.style.color='red';
+                document.body.prepend(h2);
+            }
+        });
+
+        
+
+    </script>
+</body>
+</html>
