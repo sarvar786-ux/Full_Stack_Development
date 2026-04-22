@@ -962,9 +962,17 @@ Functions:
 
                 2.Remove Event:
                 ---------------
-                        1. first we need to add event then only we can delete an event
+                         - first we need to add event then only we can delete an event
 
 
                                 let div=document.getElementById('div');
                                         div.addEventListener('eventName',functionName);
                                         div.removeEventListener('eventName',functionName);
+
+                3. Dispatch Event:
+                ------------------
+                         - it is used to define an event programatically
+                         - Dispatching an event means we manually trigger an event using JS instead of 
+                           waiting for the user action
+
+                        diapatchEvent(event);
