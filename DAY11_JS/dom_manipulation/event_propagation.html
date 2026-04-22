@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event propagation</title>
+</head>
+<style>
+    #parent{
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+    }
+    #child{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(162, 22, 151);
+    }
+</style>
+<body>
+    <div id="parent">
+        <div id="child">
+            <button id="btn">click me</button>
+        </div>
+    </div>
+    <script>
+        // ========================event bubbling==============================
+        let parent=document.getElementById('parent')
+        let child=document.getElementById('child')
+        let grandchild=document.getElementById('btn')
+
+        // parent.addEventListener('click',()=>{
+        //     console.log('parent is clicked'); 
+        //     alert('parent is clicked')
+
+        // });
+        // child.addEventListener('click',(event)=>{
+        //     event.stopPropagation();
+        //     console.log('child is clicked'); 
+        //     alert(' child is clicked')
+
+        // });
+        // grandchild.addEventListener('click',(event)=>{
+        //     event.stopPropagation();
+        //     console.log('grandchild is clicked'); 
+        //     alert('grand child is clicked')
+        // });
+
+        // =========================event capturing===================
+        parent.addEventListener('click',()=>{
+            console.log('parent is clicked'); 
+            //alert('parent is clicked')
+
+        }, true);
+        child.addEventListener('click',(event)=>{
+            console.log('child is clicked'); 
+            // alert(' child is clicked')
+
+        },true);
+        grandchild.addEventListener('click',(event)=>{
+            console.log('grandchild is clicked'); 
+            // alert('grand child is clicked')
+        },true);
+    </script>
+</body>
+</html>

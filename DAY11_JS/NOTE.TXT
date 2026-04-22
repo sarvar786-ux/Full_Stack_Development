@@ -976,3 +976,11 @@ Functions:
                            waiting for the user action
 
                         diapatchEvent(event);
+
+                Event Propagation:
+                -----------------
+                                - the event will propagate from child to parents and vice versa
+                           1. Event bubbling:
+                                - it will propagate from child to parent
+                                - this is default propagation
+                           2. Event capturing /tricking:
