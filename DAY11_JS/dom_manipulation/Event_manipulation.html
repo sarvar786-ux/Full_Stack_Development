@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manipulation</title>
+</head>
+<body>
+    <!-- in line event -->
+    <div onclick="inlineEvent()">click</div>
+    <!-- event through property -->
+    <i id="i">Mouse hover</i>
+
+    <input type="text" id="inputText">
+    <p id="p" style="border: 1px solid black; height: 200px; width: 200px;"></p>
+    <script>
+    
+        function inlineEvent(){
+            console.log('clicked by using inline');
+        }
+
+
+        // event through property
+        let i=document.getElementById('i');
+        i.onmouseover=function(){
+            i.style.color='green'
+        }
+
+        //
+        let inputText=document.getElementById('inputText');
+        //console.log(inputText);
+        
+        inputText.addEventListener('keyup',()=>{
+            console.log('typing',inputText.value);
+            
+        });
+        let p=document.getElementById('p');
+        function randomColor(){
+            let color='#'+Math.floor(Math.random()*1234567853).toString(16);
+            p.style.background=color;
+            console.log(color);
+        }
+        p.addEventListener('click',randomColor);
+        
+        setTimeout(() => {
+            p.removeEventListener('click',randomColor);
+            console.log('removed event');
+            
+        }, 2000);
+        
+        
+    </script>
+</body>
+</html>

@@ -947,7 +947,24 @@ Functions:
                         4.window events--- onload , onResize etc..,
 
 
-                Adding event:
-                                1.inline
-                                2.event property
-                                3.addEventListener()
+                1.Adding event:
+                ---------------
+                                1.inline:
+                                        <h1 onEventName="functionName"></h1>
+                                2.event property:
+
+                                        let span=document.getElementById('span);
+                                                span.onEventName=functionName();
+
+                                3.addEventListener():
+                                        let div=document.getElementById("div");
+                                                div.addEventListener('evenName',functionName());
+
+                2.Remove Event:
+                ---------------
+                        1. first we need to add event then only we can delete an event
+
+
+                                let div=document.getElementById('div');
+                                        div.addEventListener('eventName',functionName);
+                                        div.removeEventListener('eventName',functionName);
