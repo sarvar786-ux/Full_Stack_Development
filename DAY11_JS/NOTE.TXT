@@ -892,7 +892,7 @@ Functions:
                                 4. attribute manipulation
                                 5. css manipulation
                                 6. event manipulation /Handling
-                1.Element  Accessing:
+                1.Element  Accessing:(deals with document)
                 ---------------------
                         1.getElementById(idName)-returns single element based on id name(unique)
                         2.getElementsByClassName(className)-returns multiple elements (Html Collection)
@@ -904,7 +904,7 @@ Functions:
                 -----------------
                 - using createElemet function of document
 
-                3.Element Manipulation:
+                3.Element Manipulation:(deals with document)
                 ----------------------
                         1.append()/appendChild() -- adds elements at the end in a parent element
                         2.prepend()----adds elements at the top in a parent element
@@ -913,7 +913,7 @@ Functions:
                         4.replaceChild(newText,oldText)--replace old element with new element in parent container
                         5.cloneNode()---it helps to create an exact copy(cloned)
                 
-                4. attribute Manipulation:
+                4. attribute Manipulation:(deals with document)
                 --------------------------
                         - modifying attributr by dom Functions
                 1. setAttribute()  -- adding attribute
@@ -922,7 +922,7 @@ Functions:
                 4. hadAttribute -- checking Attribute is exist or not  and return boolean output
 
 
-                5. CSS manipulation:
+                5. CSS manipulation:(dealin with element)
                 --------------------
                         1. style - adding css (inline css)
                         2. ClassList.add()-- adding class
@@ -930,3 +930,24 @@ Functions:
                         4. ClassList.toggle -- toggling class--(on/off)
                         5. ClassList.contain -- chacking class present or not
                         6. getComputedStyle() -- accessinng style
+
+                6. event manipulation:
+                ----------------------
+                        function : it is a block of to perform a specific task 
+                                 : it can be usable
+
+                        event: it is the action occurs in teh browser side
+                             : when evemt triggers it will call function to perform a task
+                             : used to gandle user interactions
+
+                examples:
+                        1.mouse events --- onclick, on double click, onMouseoveretc...,
+                        2.keyboard events ---onkeyup , onKeyDown, onKeypress etc...,
+                        3.form events ---- onSubmit , onChange , onFocus, onBlur  etc....,
+                        4.window events--- onload , onResize etc..,
+
+
+                Adding event:
+                                1.inline
+                                2.event property
+                                3.addEventListener()

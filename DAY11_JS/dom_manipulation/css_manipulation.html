@@ -14,9 +14,30 @@
         }
     </style>
 <body>
-    <div id="div1">Adding</div>
-    <div id="div2">Removing</div>
+    <div id="div1" >Adding</div>
+    <div id="div2" class="box">Removing</div>
+    <div id="div3" onclick="tooglebox()">toogle</div>
+    <div id="div4" class="box">4th box</div>
     <script>
+        let div4=document.getElementById('div4');
+        let style=getComputedStyle(div4)
+        // to access style for an element
+        console.log(style);
+        console.log(style.border);
+        console.log(style.height);
+        //checking that style is present or not
+        console.log(div4.classList.contains('box'));
+        
+
+
+
+        
+
+        let div3=document.getElementById('#div3');
+
+        function tooglebox(){
+            div3.classList.toggle('box')
+        }
         let div1=document.querySelector('#div1')
         console.log('div1');
         div1.classList.add('box');
