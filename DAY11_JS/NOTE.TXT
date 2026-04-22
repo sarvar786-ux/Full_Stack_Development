@@ -983,4 +983,27 @@ Functions:
                            1. Event bubbling:
                                 - it will propagate from child to parent
                                 - this is default propagation
+                                ex: button --->child--->parent
                            2. Event capturing /tricking:
+                                - it will propagate from parent to child
+                                - in addEventListener() , we need to true in 3rd arguments
+                                ex: parent ---> child----->button
+                        note: event.stopPropagation() is used to stop Propagation
+
+                Jquery
+                -------
+                        - it is fast high weight library
+                        - we can simply html css and js task
+                1.Accessing /select Elements:
+                        $("tagname") //all tags
+                        $("idname") // id
+                        $(".classname") // class
+
+                2.Adding events:
+                        $("tagname").eventName(function);
+
+                3.CSS manipulation:
+                        $("tagname").css("Propername","value');
+                4.Adding content:
+                        $(tagname).text("text---------");
+                        $(tagname).html("h1>text------</h1>)

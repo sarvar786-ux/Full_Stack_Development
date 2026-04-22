@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query example</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js" integrity="sha256-8DGpv13HIm+5iDNWw1XqxgFB4mj+yOKFNb+tHBZOowc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, deleniti?</div>
+    <button id="btn">click to hide a content</button>
+    <script>
+        // through jquery
+        // $('#btn').click(()=>{
+        //     $('#div1').hide()
+        // });
+        // using js
+        let div1=document.getElementById('div1');
+        let btn=document.getElementById('btn');
+        btn.addEventListener('click',()=>{
+            div1.innerHTML='';
+        });
+    </script>
+</body>
+</html>
