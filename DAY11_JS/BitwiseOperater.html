@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bitwise Operater</title>
+</head>
+<body>
+    <script>
+        //5 --101
+        let num=5
+        console.log(num.toString(2)); // to convert number into binary number ---2 indicate for binary
+
+
+        let a=5;//1 0 1
+        let b=3;//0 1 1
+        // -------------
+        //        0 0 1
+
+        console.log(a&b);//1   ----decimal number --1
+        
+        // 1 0 1
+        // 0 1 1
+        //-----------
+        // 1 1 1
+        console.log(a|b);
+        
+        // 1 0 1
+        // 0 1 1
+        // -----------
+        // 1 1 0
+
+        console.log(a^b);
+        // 101 --0 1 0
+        console.log(~a);
+        
+        
+    </script>
+</body>
+</html>

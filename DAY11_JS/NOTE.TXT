@@ -173,7 +173,32 @@ Operators:
                                                 first decrease the value and usethe value
                                 2.post-decrement: value--
                                                 first use the value and decrease the value
+        binary number :0,1
+        decimal number : 0,1,2,3,4,5,6,7,8,9
+        ocatal number : 0,1,2,3,4,5,6,7
+        hexadecimal :  0,1,2,3,4,5,6,7,A,B,C,D,E,F
 
+
+        8.bitwise operater:
+                        &  - bitwise And
+                        |  - bitwise or
+                        ^  - bitwise XOR
+                        ~  - bitwise not
+                        << - left shift
+                        >> - right shift
+
+        ------------------------------------
+A       1    1    0   0
+
+B       1    0    1   0
+        ----------------------
+AND     1    0    0   0
+
+OR      1    1    1   0
+
+XOR     0    1    1   0
+
+NOT(A)  0    0    1   1 
 ======================================================================================================
 
 conditional statements:
