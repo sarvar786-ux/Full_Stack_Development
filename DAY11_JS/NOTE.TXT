@@ -1025,3 +1025,25 @@ Closures:
         let children=parent();
         children();
 =====================================================================================================
+this:
+-------
+        - it is the keyword , it refers an object 
+        - it helps to call property /function 
+call():
+-------
+        - it a function , userd to call a function 
+        - when need to invoke a function immediately with a value(this)
+        --- pass the value into a function as arguments
+
+apply():
+--------
+        - It is a function , usaed to call a function
+        - when need to invoke a function immediately with a value(this)
+        --- pass the value into a function as array
+
+bind():
+-------
+        - It is the function , used to bind/fix the value of this keyword for a Function
+        --- pass the value into a function as arguments
+        --- it returns a function 
+=======================================================================================================

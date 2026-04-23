@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Function</title>
+</head>
+<body>
+    <script>
+        let student={
+              name:"sarvar"
+        }
+        let student2={
+            name:'rahman'
+        }
+
+
+        function great(){
+            console.log("hello dear", this.name);
+            
+        }
+        great()// hello dear
+        great.call(student)
+        great.call(student2)
+
+        function greet(msg,msg2){
+            console.log(msg,msg2,this.name);
+            
+        }
+        greet.call(student,'hello student .....', "welcome......") // in the format of argument
+        greet.apply(student,['hello dear','welcome to session..']) // in the format of array
+
+
+        let student3={
+            name:"ashok",
+            task:function(){
+                console.log('Hi Welcome',this.name);
+                
+            }
+        }
+        let fun=student3.task;
+        fun();
+        let fun2=student3.task.bind(student3);
+        fun2()
+    </script>
+</body>
+</html>
