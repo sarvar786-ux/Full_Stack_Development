@@ -1007,3 +1007,21 @@ Functions:
                 4.Adding content:
                         $(tagname).text("text---------");
                         $(tagname).html("h1>text------</h1>)
+========================================================================================================
+Closures:
+---------
+        - It is a special function, which can access to the parent scope data/ variable (texical scope)
+        - It can access the varaible /function of parent scope
+        - It is use private varible/functions (data hiding ----Encapculation)
+
+        example:
+
+        function parent(){
+           let property="Home";
+           function child(){
+                console.log(property)
+           }
+        }
+        let children=parent();
+        children();
+=====================================================================================================
