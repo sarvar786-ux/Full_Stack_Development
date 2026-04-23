@@ -55,6 +55,24 @@
         }else{
             console.log(value,' is even number');
         }
+
+
+        let obj={
+            value1:"element",
+            fun:function(){
+                console.log("function of an object",this.value1);
+                
+            }
+        }
+
+        console.log(obj.value1);
+        obj.fun();
+
+        let obj2={
+            value1:"element of obj 2"
+        }
+         let fun2=obj.fun.bind(obj2);
+         fun2();
     </script>
 </body>
 </html>

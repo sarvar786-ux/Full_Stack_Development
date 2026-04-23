@@ -73,4 +73,11 @@ console.log(sum1);
     console.log('second largest: ' + slargest);
     console.log('first largest: ' + flargest);
     
+    let str="this is javascript code";
+    let res="";
+    let words=str.split(' ');
+    for (const element of words) {
+        res=res+element.charAt(0).toUpperCase()+element.slice(1)+" ";
+    }
+    console.log(res);
     
