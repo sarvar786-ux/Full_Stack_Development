@@ -4,9 +4,10 @@ import './index.css'
 import App from './App.jsx'
 import Navbar from './components/Navbar.jsx'
 import Manubar from './components/Manubar.jsx'
+import Counter from './components/Counter.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Manubar/>
+    <App/>
   </StrictMode>,
 )
