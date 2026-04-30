@@ -13,17 +13,11 @@ const Counter = () => {
     }
     // let [conter ,setCounter]=useState(counter)
     function incrementBy2() {
-        if (counter>0)
            setCounter(counter += 2)
-        else
-            alert('Limit Reached')
+        
     }
     function decrementBy2() {
-        if (counter>0)
            setCounter(counter -= 2)
-        else 
-            alert('Limit Reached')
-            
     }
     return (
         
