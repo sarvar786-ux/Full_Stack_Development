@@ -6,17 +6,24 @@ const Counter = () => {
     //whatever prefix "use.." is known as hooks in react
     let [counter, setCounter] = useState(0)    //initial counter
     function increment() {
-        if (counter <= 9)
+        if (counter <=9)
             setCounter(++counter)
         else
             alert('Limit Reached')
     }
-
+    // let [conter ,setCounter]=useState(counter)
     function incrementBy2() {
-        setCounter(counter += 2)
+        if (counter>0)
+           setCounter(counter += 2)
+        else
+            alert('Limit Reached')
     }
     function decrementBy2() {
-        setCounter(counter -= 2)
+        if (counter>0)
+           setCounter(counter -= 2)
+        else 
+            alert('Limit Reached')
+            
     }
     return (
         
