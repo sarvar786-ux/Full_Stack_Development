@@ -4,17 +4,18 @@
 
         // && it will consider the first false value
         // if all are true then consider the first true
-        const rockButton=document.querySelector("#Rock_button")
-        const paperButton=document.querySelector("#paper_button")
-        const scissorsButton=document.querySelector("#Scissors_button")
-        const refreshButton=document.querySelector("#Referesh_button")
+        const rockButton=document.querySelector("#rock-button")
+        const paperButton=document.querySelector("#paper-button")
+        const scissorsButton=document.querySelector("#scissors-button")
+        const refreshButton=document.querySelector("#refresh-button")
+        const autoplayButton=document.querySelector("#autoplay-button")
 
 
         rockButton.addEventListener('click', ()=>{playGame('Rock')})
         paperButton.addEventListener('click', ()=>{playGame('Paper')})
         scissorsButton.addEventListener('click', ()=>{playGame('Scissors')})
-       
-        
+        refreshButton.addEventListener('click',resetScore )
+        autoplayButton.addEventListener('click', autoplayMode)
         let win=0,lose=0,tie=0;
         let score= JSON.parse(localStorage.getItem("myrpsscores")) ||
         {win,lose,tie}
@@ -68,6 +69,7 @@
        
 
         movesDiv.innerHTML=`Player Move ${playerMove} Computer Move ${computerMove}`
+        movesDiv.innerHTML=`Player Move  <img class="small-move-image" src="./images/${playerMove}-emoji.png" /> Computer Move <img class="small-move-image" src="./images/${computerMove}-emoji.png" />`
         resultsDiv.innerHTML=`Result ${result}`
         localStorage.setItem('myrpsscores', JSON.stringify(score))
         displayScoreboard();
@@ -89,7 +91,7 @@
             return "Scissors"
         }
 
-        refreshButton.addEventListener('click',resetScore )
+       
         function resetScore()
         {
             if(JSON.parse(localStorage.getItem("myrpsscores")))
@@ -98,4 +100,25 @@
                 score={win:0,lose:0,tie:0}
                 displayScoreboard();
             }
+        }
+
+        let interval
+        let flag=false
+        function autoplayMode()
+        {
+                if(!flag)
+                {
+                    flag=true
+                    interval=setInterval(
+                        ()=>{
+                           let computerGeneratedPlayerMove=generateComputerMove() 
+                           playGame(computerGeneratedPlayerMove)
+                        },1000
+                    )
+                }
+                else
+                {
+                    clearInterval(interval)
+                    flag=false
+                }
         }
