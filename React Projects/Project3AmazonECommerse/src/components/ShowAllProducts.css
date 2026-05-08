@@ -1,0 +1,81 @@
+Container Grid
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    background-color: #f5f7fa;
+}
+
+/* Card Styling */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Body */
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Title */
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Description */
+.desc {
+    font-size: 14px;
+    color: #666;
+    height: 50px;
+    overflow: hidden;
+}
+
+/* Category */
+.category {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Button */
+.btn {
+    margin-top: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    transform: scale(1.05);
+}
