@@ -11,15 +11,17 @@ import LandingPage from './pages/LandingPage'
 import NavBar1 from './components/NavBar1'
 import SingleProduct from './pages/SingleProduct'
 import AllProductsPage2 from './pages/AllProductsPage2'
+
 const App = () => {
   return (
   <Router>
       <NavBar1/>
           <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/shop" element={<AllProductsPage2 />} />
+                <Route path="/shop" element={<AllProductsPage2/>} />
                 <Route path="/rich" element={<RictTextBox2 />} />
-                <Route path="/single/:prodid" element={<SingleProduct />} />
+                <Route path="/single/:prodid" element={<SingleProduct/>} />
+
           </Routes>
   </Router>
   )

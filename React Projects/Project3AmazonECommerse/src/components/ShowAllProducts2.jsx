@@ -1,5 +1,6 @@
 import React from 'react';
-import products from '../data/Allproducts';
+import './ShowAllProducts.css';
+import products from '../data/allproducts';
 import './ShowAllProducts2.css'
 
 const ShowAllProducts2 = () => {

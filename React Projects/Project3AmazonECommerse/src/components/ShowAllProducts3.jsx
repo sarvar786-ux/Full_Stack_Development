@@ -1,16 +1,14 @@
 import React from 'react';
 import './ShowAllProducts.css';
 import productsx from '../data/allproducts';
-// import './ShowAllProducts2.css'
+import './ShowAllProducts2.css'
 import Product from './Product';
 import FilterBar from './FilterBar';
 import { useState } from 'react';
 import FilterByCategoryBar from './FilterByCategoryBar';
 import FilterByPrice from './FilterByPrice';
 import FilterByPrice2 from './FilterByPrice2';
-import './ShowAllProducts3.css'
-import SearchBar from './SearchBar.jsx';
-
+import SearchBar from './SearchBar';
 
 const ShowAllProducts3 = () => {
 
@@ -65,11 +63,23 @@ const ShowAllProducts3 = () => {
 
         setProducts(filteredProducts)
     }
+
+    function searchProduct(event)
+    {
+        let searchText=event.target.value;
+        console.log(searchText)
+
+        const searchedProducts=buproducts.filter(
+            (prod)=> (prod.title.toLowerCase().includes(searchText.toLowerCase())) || prod.description.toLowerCase().includes(searchText.toLowerCase()))
+                       
+        setProducts(searchedProducts)
+    }
     return (
         <>
         <FilterByCategoryBar categories={allCategories} handleClick={filterByCategory}/>
         {/* <FilterByPrice handleClick={filterByPrice}/> */}
         <FilterByPrice2 handleChange={filterByPriceNew}/>
+        <SearchBar handleChange={searchProduct}/>
         <div className="container py-5">
             <div className="row g-4">
                 {products.map((product, index) => {

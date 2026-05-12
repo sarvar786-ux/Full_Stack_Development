@@ -2,27 +2,36 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 const Product = ({product}) => {
   return (
-     <div className="product-card">
+     <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div className="card h-100 shadow-sm border-0 product-card">
+                                <Link to={`/single/${product.id}`}>
+                                <div className="image-wrapper">
+                                    <img 
+                                        src={product.image} 
+                                        className="card-img-top product-img" 
+                                        alt={product.title} 
+                                    />
+                                </div>
+                                </Link>
+                                <div className="card-body d-flex flex-column">
+                                    <h6 className="card-title fw-bold text-truncate">
+                                        {product.title}
+                                    </h6>
 
-  <img src={product.image} alt="" />
+                                    <p className="text-muted small mb-1">
+                                        {product.category}
+                                    </p>
 
-  <div className="product-content">
+                                    <p className="card-text small flex-grow-1">
+                                        {product.description.substring(0, 60)}...
+                                    </p>
 
-    <h4 className="product-title">
-      {product.title.slice(0, 50)}
-    </h4>
-
-    <p className="product-price">
-      ${product.price}
-    </p>
-
-    <button className="product-btn">
-      View
-    </button>
-
-  </div>
-
-</div>
+                                    <button className="btn btn-dark w-100 mt-auto">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
   )
 }
 

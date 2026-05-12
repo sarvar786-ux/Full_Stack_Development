@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import axios from 'axios'
 import Breadcrumb from '../components/Breadcrumb';
 import ProductContext from '../contexts/ProductContext';
-
+import SingleProduct from './SingleProduct'
 const AllProductsPage2 = () => {
 
     const [products, setProducts] = useState([])
@@ -22,13 +22,12 @@ const AllProductsPage2 = () => {
 
     //const {products} = useContext(ProductContext)
 
-    useEffect(
-        ()=>{
-           setProducts(data.products)
-           setBuproducts(data.products)
-           
-        },[]
-    )           
+   useEffect(() => {
+    if (data?.products) {
+        setProducts(data.products)
+        setBuproducts(data.products)
+    }
+}, [data.products])           
 
 
     const productCategories = buproducts.map(
