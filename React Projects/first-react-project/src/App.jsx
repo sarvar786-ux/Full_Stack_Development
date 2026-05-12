@@ -6,7 +6,7 @@ const App = () => {
   //pure JS code
   return (
     <div>
-      <Counter/>
+      <TestImages/>
     </div>
   )
 }

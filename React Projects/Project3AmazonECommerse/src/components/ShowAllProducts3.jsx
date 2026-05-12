@@ -1,7 +1,7 @@
 import React from 'react';
 import './ShowAllProducts.css';
 import productsx from '../data/allproducts';
-import './ShowAllProducts2.css'
+// import './ShowAllProducts2.css'
 import Product from './Product';
 import FilterBar from './FilterBar';
 import { useState } from 'react';
