@@ -13,6 +13,8 @@ import AllProductsPage2 from './pages/AllProductsPage2'
 import RictTextBox2 from './pages/RictTextBox2'
 import SingleProduct2 from './pages/SingleProduct2'
 import ShoppingCart from './pages/ShoppingCart'
+import CheckOut from './pages/CheckOut'
+import MakePayment from './pages/MakePayment'
 const App = () => {
 
   const [loading, setLoading] = useState(true)
@@ -61,11 +63,11 @@ const App = () => {
         />
 
         <Route
-          path="/cart"
-          element={<ShoppingCart />}
-        />
-
+          path="/cart" element={<ShoppingCart />}/>
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/payment" element={<MakePayment />} />
       </Routes>
+      
 
     </Router>
   )

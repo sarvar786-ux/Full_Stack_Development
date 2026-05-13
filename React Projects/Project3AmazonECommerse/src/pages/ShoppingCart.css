@@ -109,7 +109,7 @@ tbody td:nth-child(4) {
 }
 
 /* Remove Button */
-.add-to-cart {
+.remove{
   padding: 12px 22px;
   border: none;
   outline: none;
@@ -129,7 +129,22 @@ tbody td:nth-child(4) {
   box-shadow:
     0 0 15px rgba(255, 77, 109, 0.35);
 }
-
+.add {
+  padding: 10px 22px;
+  margin-top: 16px;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  background: #0b1f3a;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow:
+    0 0 15px rgba(255, 77, 109, 0.35);
+}
+ 
 .add-to-cart:hover {
   transform: translateY(-3px) scale(1.03);
 

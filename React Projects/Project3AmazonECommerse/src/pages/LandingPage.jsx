@@ -27,7 +27,7 @@ const LandingPage = () => {
 
         <div className="hero-buttons">
           <button className="shop-btn" onClick={() => navigate('/shop')}>Shop Now</button>
-          <button className="explore-btn" onClick={() => navigate('/shop')}>Explore</button>
+          <button className="explore-btn" onClick={() => navigate('/cart')}>Explore</button>
         </div>
       </div>
 
