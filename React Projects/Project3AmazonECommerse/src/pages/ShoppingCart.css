@@ -1,0 +1,251 @@
+#prod-image{
+    height: 30px;
+}
+/* ShoppingCart.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #071225,
+    #0b1f3a,
+    #09162b
+  );
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+/* Main Wrapper */
+table {
+  width: 92%;
+  margin: 60px auto;
+  border-collapse: collapse;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 40px rgba(0, 183, 255, 0.12),
+    0 0 80px rgba(0, 183, 255, 0.06);
+
+  animation: fadeIn 0.7s ease;
+}
+
+/* Table Header */
+thead {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+thead th {
+  padding: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #42c8ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Table Rows */
+tbody tr {
+  transition: 0.3s ease;
+}
+
+tbody tr:hover {
+  background: rgba(66, 200, 255, 0.08);
+  transform: scale(1.01);
+}
+
+tbody td {
+  padding: 22px;
+  text-align: center;
+  font-size: 16px;
+  color: #e4e4e4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Product Image */
+#prod-image {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+
+  background: white;
+  padding: 10px;
+
+  border-radius: 18px;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 0 15px rgba(66, 200, 255, 0.2);
+}
+
+#prod-image:hover {
+  transform: scale(1.08);
+}
+
+/* Quantity Badge */
+tbody td:nth-child(3) {
+  font-weight: 700;
+  color: #42c8ff;
+  font-size: 18px;
+}
+
+/* Price */
+tbody td:nth-child(4) {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Remove Button */
+.add-to-cart {
+  padding: 12px 22px;
+  border: none;
+  outline: none;
+
+  border-radius: 14px;
+
+  background: #38bdf8;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 0 15px rgba(255, 77, 109, 0.35);
+}
+
+.add-to-cart:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  box-shadow:
+    0 0 25px rgba(255, 77, 109, 0.5);
+}
+
+/* Empty Cart Style */
+.empty-cart {
+  text-align: center;
+  margin-top: 120px;
+  color: #d8d8d8;
+}
+
+.empty-cart h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.empty-cart p {
+  font-size: 20px;
+  color: #9fb3c8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  table {
+    width: 98%;
+  }
+
+  thead th,
+  tbody td {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  #prod-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .add-to-cart {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 20px;
+    border-radius: 18px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+    border: none;
+  }
+
+  tbody td::before {
+    font-weight: 700;
+    color: #42c8ff;
+  }
+
+  tbody td:nth-child(1)::before {
+    content: "Title";
+  }
+
+  tbody td:nth-child(2)::before {
+    content: "Image";
+  }
+
+  tbody td:nth-child(3)::before {
+    content: "Qty";
+  }
+
+  tbody td:nth-child(4)::before {
+    content: "Price";
+  }
+
+  tbody td:nth-child(5)::before {
+    content: "Action";
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

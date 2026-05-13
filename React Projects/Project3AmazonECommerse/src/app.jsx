@@ -11,17 +11,18 @@ import LandingPage from './pages/LandingPage'
 import NavBar1 from './components/NavBar1'
 import SingleProduct from './pages/SingleProduct'
 import AllProductsPage2 from './pages/AllProductsPage2'
-
+import SingleProduct2 from './pages/SingleProduct2'
+import ShoppingCart from './pages/ShoppingCart'
 const App = () => {
   return (
   <Router>
       <NavBar1/>
           <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/shop" element={<AllProductsPage2/>} />
+                <Route path="/shop" element={<AllProductsPage2 />} />
                 <Route path="/rich" element={<RictTextBox2 />} />
-                <Route path="/single/:prodid" element={<SingleProduct/>} />
-
+                <Route path="/single/:prodid" element={<SingleProduct2 />} />
+                <Route path="/cart" element={<ShoppingCart />} />
           </Routes>
   </Router>
   )
