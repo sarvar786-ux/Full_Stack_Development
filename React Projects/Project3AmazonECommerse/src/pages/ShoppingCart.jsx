@@ -3,8 +3,16 @@ import './ShoppingCart.css'
 import ProductContext from '../contexts/ProductContext'
 const ShoppingCart = () => {
 
-    const { products, cartitems,removeFromCart } = useContext(ProductContext)
-
+    const { products, 
+    cartitems,
+    removeFromCart } 
+    = useContext(ProductContext)
+    const totalAmount = products
+    .filter((prod) => cartitems[prod.id] > 0)
+    .reduce((total, prod) => {
+        return total +
+        cartitems[prod.id] * prod.price
+    }, 0)
     return (
         <>
             <table>
@@ -39,6 +47,14 @@ const ShoppingCart = () => {
                         }
                         )}
                 </tbody>
+                <div className="cart-total">
+                    <h2>
+                        Total Amount:
+                        <span>
+                        ${totalAmount.toFixed(2)}
+                        </span>
+                    </h2>
+                </div>
             </table>
         </>
     )

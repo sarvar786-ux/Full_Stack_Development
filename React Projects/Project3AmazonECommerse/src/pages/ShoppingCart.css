@@ -249,3 +249,43 @@ tbody td:nth-child(4) {
     transform: translateY(0);
   }
 }
+.cart-total {
+
+  width: 92%;
+
+  margin: 30px auto;
+
+  padding: 25px;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 0 25px rgba(0,183,255,0.08);
+
+  text-align: right;
+}
+
+.cart-total h2 {
+
+  color: white;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+}
+
+.cart-total span {
+
+  color: #39c6ff;
+
+  margin-left: 15px;
+
+  text-shadow:
+    0 0 15px rgba(57,198,255,0.5);
+}

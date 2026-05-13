@@ -57,7 +57,7 @@ const RictTextBox = () => {
 
   return (
     <div className="app-container">
-      <h1 className="title">✨Welcome To Text Studio</h1>
+      <h1 className="title">✨Welcome To <span>Text Studio</span></h1>
 
       <div className="card">
         
