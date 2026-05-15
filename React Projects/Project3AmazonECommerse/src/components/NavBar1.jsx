@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {useNavigate} from 'react-router-dom'
 import './NavBar.css'
+import ProductContext from '../contexts/ProductContext'
 
 const NavBar1 = () => {
   const navi=useNavigate()
@@ -8,12 +9,16 @@ const NavBar1 = () => {
   {
       navi(value)
   }
+  const { totalCartItems } = useContext(ProductContext)
   return (
    <ol className='navbar'>
         <li onClick={()=>handleClick("/")}>Home</li>
         <li onClick={()=>handleClick("/shop")}>Shopping</li>
         <li onClick={()=>handleClick("/rich")}>TextArea</li>
-        <li onClick={()=>handleClick("/cart")} id="cart-icon" >Cart</li>
+        <li id="cart-icon" onClick={() => handleClick("/cart")}>
+        Cart
+        <span id="timing">{totalCartItems()}</span>
+      </li>
    </ol>
   )
 }

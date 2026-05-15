@@ -15,6 +15,8 @@ import SingleProduct2 from './pages/SingleProduct2'
 import ShoppingCart from './pages/ShoppingCart'
 import CheckOut from './pages/CheckOut'
 import MakePayment from './pages/MakePayment'
+import OrderConfirmation from './pages/OrderConfirmation'
+
 const App = () => {
 
   const [loading, setLoading] = useState(true)
@@ -66,6 +68,7 @@ const App = () => {
           path="/cart" element={<ShoppingCart />}/>
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/payment" element={<MakePayment />} />
+        <Route path="/proceed" element={<OrderConfirmation />} />
       </Routes>
       
 

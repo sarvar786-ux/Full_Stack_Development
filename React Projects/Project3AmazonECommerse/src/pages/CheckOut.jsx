@@ -2,147 +2,148 @@ import React, { useContext, useState } from 'react'
 import './CheckOut.css'
 import ProductContext from '../contexts/ProductContext'
 import { useNavigate } from 'react-router-dom'
-
 const CheckOut = () => {
-
     const navigate = useNavigate()
-
-    const {
-        products,
-        cartitems
-    } = useContext(ProductContext)
-
-    const [promocode, setPromocode] = useState("")
+    const { products, cartitems } = useContext(ProductContext)
+    const [promocode, setPromocode] = useState()
+    const [isPromoApplied, setIsPromoApplied] = useState(false)
     const [discount, setDiscount] = useState(0)
-
+    const [address, setAddress] = useState("")
     function calculateTotal() {
-
-        return products.reduce((total, prod) => {
-
-            const quantity =
-                cartitems[prod.id] || 0
-
-            return total +
-                (prod.price * quantity)
-
-        }, 0)
+        return products.reduce(
+            (total, prod) => {
+                const quantity = cartitems[prod.id] || 0;
+                return total + (prod.price * quantity)
+            }, 0
+        )
     }
 
-    const carttotal = calculateTotal()
-
-    const shippingFee = carttotal * 0.05
-
-    const totalPayable =
-        carttotal + shippingFee - discount
-
+    let carttotal = calculateTotal()
+    //let shippingFee = carttotal * 0.05
+    const [shippingFee, setShippingFee] = useState(carttotal * 0.05)
+    let totalPayable = carttotal + shippingFee
     function proceedToPayment() {
-        navigate("/payment")
+        if (address)
+            navigate("/payment")
+        else
+            alert('Please enter shipping address')
     }
 
     function handlePromoOnChange(event) {
         setPromocode(event.target.value)
     }
+    console.log(promocode)
 
     function applyPromoCode() {
-
-        if (promocode === "EXL10") {
-
-            const promoDiscount =
-                carttotal * 0.10
-
-            setDiscount(promoDiscount)
-
-        } else {
-
-            alert(`${promocode} is Invalid Code`)
+        if (promocode === "WELCOME10") {
+            setIsPromoApplied(true)
+            setDiscount(0.10 * carttotal)
+            totalPayable = totalPayable - discount
+            setShippingFee(totalPayable * 0.05)
+        }
+        else {
+            alert(`${promocode} is Invalid code`)
         }
     }
 
+    function populateAddress(event) {
+        setAddress(event.target.value)
+    }
     return (
+        <>
+            <div className="container d-flex justify-content-center align-items-center mt-5">
 
-        <div className="checkout-page">
+                <div className="card shadow-lg p-4 w-50 rounded-4">
+                    {!isPromoApplied ? <div>
+                        <h1 className="text-center mb-4 text-primary">
+                            Cart Summary
+                        </h1>
 
-            <div className="checkout-card">
+                        <div className="d-flex justify-content-between border-bottom py-3">
+                            <p className="fw-semibold m-0">Cart Total Amount</p>
+                            <p className="m-0">₹ {carttotal.toFixed(2)}</p>
+                        </div>
 
-                <h1 className="checkout-title">
-                    Cart Summary
-                </h1>
 
-                {/* CART TOTAL */}
 
-                <div className="summary-row">
+                        <div className="d-flex justify-content-between border-bottom py-3">
+                            <p className="fw-semibold m-0">Shipping Fee</p>
+                            <p className="m-0">₹ {shippingFee.toFixed(2)}</p>
+                        </div>
 
-                    <p>Cart Total Amount</p>
+                        <div className="d-flex justify-content-between py-3">
+                            <p className="fw-bold fs-5 m-0">Total Payable</p>
+                            <p className="fw-bold fs-5 text-success m-0">
+                                ₹ {totalPayable.toFixed(2)}
+                            </p>
+                        </div>
 
-                    <span>
-                        ₹ {(carttotal - discount).toFixed(2)}
-                    </span>
+                    </div>
 
-                </div>
+                        :
+                        <div>
+                            <h1 className="text-center mb-4 text-primary">
+                                Cart Summary
+                            </h1>
 
-                {/* SHIPPING */}
+                            <div>
+                                <div className="d-flex justify-content-between border-bottom py-3">
+                                    <p className="fw-semibold m-0">Cart Total Amount</p>
+                                    <p className="m-0">₹ {(carttotal - discount).toFixed(2)}</p>
+                                </div>
+                            </div>
 
-                <div className="summary-row">
+                            <div className="d-flex justify-content-between border-bottom py-3">
+                                <p className="fw-semibold m-0">Shipping Fee</p>
+                                <p className="m-0">₹ {shippingFee.toFixed(2)}</p>
+                            </div>
 
-                    <p>Shipping Fee</p>
+                            <div className="d-flex justify-content-between py-3">
+                                <p className="fw-bold fs-5 m-0">Total Payable</p>
+                                <p className="fw-bold fs-5 text-success m-0">
+                                    ₹ {(totalPayable - discount).toFixed(2)}
+                                </p>
+                            </div>
+                        </div>
+                    }
 
-                    <span>
-                        ₹ {shippingFee.toFixed(2)}
-                    </span>
-
-                </div>
-
-                {/* TOTAL */}
-
-                <div className="summary-row total-row">
-
-                    <p>Total Payable</p>
-
-                    <span className="total-amount">
-                        ₹ {totalPayable.toFixed(2)}
-                    </span>
-
-                </div>
-
-                {/* PROMO */}
-
-                <div className="promo-section">
-
-                    <p>
-                        Do you have any coupon?
-                    </p>
-
-                    <div className="promo-box">
-
-                        <input
-                            type="text"
-                            placeholder="Promo Code"
+                    <div className="d-flex justify-content-between py-3">
+                        <p className="fw-bold fs-5 m-0">Do you have any Coupon?</p>
+                        <input type="text"
+                            placeholder='Promo Code'
                             value={promocode}
                             onChange={handlePromoOnChange}
                         />
+                        <button onClick={applyPromoCode}>Apply</button>
+                        <button onClick={() => setIsPromoApplied(false)}>Remove</button>
+                    </div>
+
+                    <div>
+                        <h2>Shipping Address</h2>
+                        <textarea
+                            name="address"
+                            value={address}
+                            onChange={populateAddress}
+                            placeholder='Enter Shipping Address'
+                            rows="5"
+                        />
+                    </div>
+
+                    <div className="payment-btn-wrapper">
 
                         <button
-                            onClick={applyPromoCode}
+                            onClick={proceedToPayment}
+                            className="payment-btn"
                         >
-                            Apply
+                            Proceed To Payment
                         </button>
 
                     </div>
 
                 </div>
 
-                {/* PAYMENT BUTTON */}
-
-                <button
-                    className="payment-btn"
-                    onClick={proceedToPayment}
-                >
-                    Proceed To Payment
-                </button>
-
             </div>
-
-        </div>
+        </>
     )
 }
 

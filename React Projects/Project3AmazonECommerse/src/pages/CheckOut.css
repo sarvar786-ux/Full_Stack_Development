@@ -229,7 +229,7 @@
   border: none;
 
   border-radius: 18px;
-
+  
   background:
     linear-gradient(
       135deg,
@@ -294,4 +294,51 @@
 
     flex-direction: column;
   }
+}
+.payment-btn-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:30px;
+}
+
+.payment-btn{
+
+    width:250px;
+
+    padding:15px 20px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #39c6ff,
+        #007bff
+    );
+
+    color:white;
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+
+    box-shadow:
+    0 0 20px rgba(57,198,255,0.3);
+}
+
+.payment-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 28px rgba(57,198,255,0.5);
 }

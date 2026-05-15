@@ -39,16 +39,16 @@ const ShoppingCart = () => {
                                         <td>{cartitems[prod.id]}</td>
                                         <td>{prod.price}</td>
                                         <td>{cartitems[prod.id] * prod.price}</td>
-                                        <td><button className='remove'
-                                            onClick={() => removeFromCart(prod.id)}
-                                        >
-                                            Remove
-                                        </button>
-                                        </td>
                                         <td><button className='add'
                                             onClick={() => addToCart(prod.id)}
                                         >
-                                            Add
+                                            ADD
+                                        </button>
+                                        </td>
+                                        <td><button className='remove'
+                                            onClick={() => removeFromCart(prod.id)}
+                                        >
+                                            REMOVE
                                         </button>
                                         </td>
 
